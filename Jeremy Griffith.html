@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+
+<!-- PAGE THEME #6: CAUTERIZE by @nonspace.
+  Don't steal.
+  Don't claim as your own.
+  Don't use as base code.
+  Editing for personal use is fine! 
+  Updated 00/00/0000 -->
+
+<head>
+
+  <title>Griffith, Jeremiah.</title><meta charset="utf-8"/>
+  <link rel="icon" type="image/png"
+    href="https://64.media.tumblr.com/6e1fa93463ed8b14cf84613ca2998bb7/828bc9cb46d82089-75/s540x810/4d5ca436a9991ec9c3f3172a98e989545a2e255d.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+
+
+  <!--FONT AWESOME ICONS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!--JQUERY-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!--JQUERY UI TOOLTIPS-->
+  <script src="https://static.tumblr.com/vuxbcsk/6FTp5y7g3/jquery-ui.min.js"></script>
+
+  <script>
+    var dd = 0;  // how many images you have to change
+    var cnt = 0;
+    function chng() {
+
+      var rotator = document.getElementById('rr');  // change to match image ID
+      var imageDir = '0';                          // change to match images folder 
+
+
+      var images = ['https://dl.dropbox.com/scl/fi/lrcfpb379rdn83nr2bmnt/kitteynsh_17.1.png?rlkey=rhpzf2e3smlf8ixw7z8cbrvff'];
+
+      cnt++;
+
+      var len = images.length;
+      if (cnt < dd) {
+        rr.src = images[cnt];
+      }
+      else if (cnt == len) {
+        rr.src = images[0];
+        cnt = 0;
+      }
+    }
+
+  </script>
+
+  <script type="text/javascript">
+    // Wait for document to load
+    document.addEventListener("DOMContentLoaded", function (event) {
+      document.documentElement.setAttribute("data-theme", "light");
+
+      // Get our button switcher
+      var themeSwitcher = document.getElementById("theme-switcher");
+
+      // When our button gets clicked
+      themeSwitcher.onclick = function () {
+        // Get the current selected theme, on the first run
+        // it should be `light`
+        var currentTheme = document.documentElement.getAttribute("data-theme");
+
+        // Switch between `dark` and `light`
+        var switchToTheme = currentTheme === "dark" ? "light" : "dark"
+
+        // Set our currenet theme to the new one
+        document.documentElement.setAttribute("data-theme", switchToTheme);
+      }
+    });
+  </script>
+
+
+  <style>
+
+    /*SET COLORS*/
+    :root {
+      --g1: #af0a49;
+      --g12: #790610;
+      --background: #d1d1d1;
+      --bullet: #000000;
+      --text: #000;
+      --border: #eee;
+      --box: #fff;
+      --credit-and-nav: #fff;
+      --color: #af0909; /*bold + italics*/
+      --cards: #ffffff; /*navigation cards*/
+      --font: 'The Stamshons';
+      --font-size: 35px;
+      --header-size: 45px;
+      --line-height: 100%;
+
+      
+     --normal: #9FA19F;
+      --grass: #3FA129;
+      --fire: #E62829;
+      --water: #2980EF;
+      --electric: #FAC000;
+      --ice: #3DCEF3;
+      --fighting: #FF8000;
+      --poison: #9141CB;
+      --ground: #915121;
+      --flying: #81B9EF;
+      --psychic: #EF4179;
+      --bug: #91A119;
+      --rock: #AFA981;
+      --ghost: #704170;
+      --dragon: #5060E1;
+      --dark: #624D4E;
+      --steel: #60A1B8;
+      --fairy: #EF70EF;
+
+    }
+
+
+    [data-theme="dark"] {
+
+      --background: #000;
+      --text: #fff;
+      --box: #000;
+      --border: #161616;
+      --credit-and-nav: #000;
+      --cards: #ffffff;
+      /*navigation cards*/
+
+      animation: lazyload 0.5s;
+    }
+
+    a:link,
+    a:active,
+    a:visited {
+      text-decoration: none;
+      color: var(--color);
+      /* IMPORTANT. CAN BE CHANGED TO A HEX CODE*/
+    }
+
+    @font-face {
+      font-family: 'The Stamshons';
+      src: url('https://dl.dropbox.com/scl/fi/cvla7uoibg8xh6amgfwdy/The-Stamshons-Demo.otf?rlkey=qc9pennkjnf6ik8flkmke374h&st=6hjwfxuk&dl=0')
+    }
+
+    .cell2 img {
+      padding-right: 30px;
+    }
+
+    /*85 - 1, 30 - 2, 3 - 3*/
+
+    /*IMAGE*/
+    .cimg {
+      margin-top: -340px;
+      /*MOVE COLORED BOX UP AND DOWN, A BIGGER # MEANS FURTHER UP PAGE, SMALLER IS FURTHER DOWN PAGE*/
+      margin-left: 400px;
+      /*MOVE COLORED BOX SIDE TO SIDE*/
+      height: 200px;
+      /*CHANGE BOX HEIGHT*/
+      width: 106px;
+      /*CHANGE BOX WIDTH*/
+    }
+
+    .cimg img {
+      margin-left: -150px;
+      /*MOVE CHARACTER SIDE TO SIDE*/
+      margin-top: -290px;
+      /*MOVE CHARACTER UP AND DOWN, A BIGGER # MEANS FURTHER UP PAGE, SMALLER IS FURTHER DOWN PAGE*/
+      height: 640px;
+    }
+  </style>
+
+  <link rel="stylesheet"
+    href="https://dl.dropbox.com/s/scl/fi/qs57dj1puo0sltrrd10ws/Hosting-Aria.css?rlkey=dwgoma3pd3i0ghywvlp1fnr9f&dl=0">
+
+</head>
+
+
+<body>
+  <div id="outer">
+    <div id="container">
+
+      <div id="credit">
+
+        <div class="switch" , id="theme-switcher"><a><i class="fa fa-moon-o" style="font-size: 14px;" aria-hidden="true"
+              title="light/dark mood"></i></a></button></div>
+        <a href="/"><i class="fa fa-home" style="font-size: 14px;" aria-hidden="true" title="home"></i></a>
+        <a href="/faqs">
+          <i class="fa fa-user" aria-hidden="true" title="faqs"></i></a>
+        <a href="/ask">
+          <i class="fa fa-envelope" aria-hidden="true" title="message"></i></a>
+        <!--CREDIT, DON'T CHANGE!!!)-->
+        <a href="https://nonspace.tumblr.com">
+          <i class="fa fa-copyright" aria-hidden="true"></i> NNSPC</a>
+      </div>
+      <!--HEADER-->
+      <header>
+        <!--CHARACTER LINKS-->
+        <nav id="cnav">
+          <div class="cl active" href="#one">BACKGROUND</div>
+          <div class="cl" href="#two">APPEARANCE</div>
+          <div class="cl" href="#three">MEDICAL </div>
+          <div class="cl" href="#four">INTERESTS</div>
+          <div class="cl" href="#five">RELATIONSHIPS</div>
+          <div class="cl" href="#six">TIMELINE</div>
+          <div class="cl" href="#seven">TRIVIA</div>
+          <div class="cl" href="#eight">POKÉMON</div>
+          <div class="cl"><a href="https://pkmn-thenextgeneration.tumblr.com/characters">OTHER PROFILES</a></div>
+        </nav>
+
+        <div class="cimg"> <img
+            src="https://dl.dropbox.com/scl/fi/soaawj4dyrttkh8cw9lgh/kitteynsh_17.1.png?rlkey=pf5zc915dpg0976g2nhusiq5q&dl=0"
+            id="rr"> </div>
+      </header>
+
+
+
+      <!--CHARACTER CARDS-->
+      <section id="wrapper">
+
+        <!--CHARACTER ONE-->
+        <div class="ccard g1 active" id="one">
+          <div class="headline">
+
+            <!--General Information-->
+            <center>
+              <h2>Jeremiah Griffith</h2>
+            </center>
+          </div><!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Full name:</i> <span> Jeremiah Landon Griffith </span> </li>
+              <li> <i>Nickname:</i> <span> Jeremy </span> </li>
+              <li> <i>Gender/Pronouns:</i> <span>He/Him</span> <span> Male </span> </li>
+              <li> <i>D.O.B:</i> <span> July 19th, 2018 </span> </li>
+              <li> <i>Status:</i> <span> <b>Alive</b> </span> </li>
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Occupation:</i> <span> Line Cook for <a href="/world">Griffith's Grill</a> </span> </li>
+              <li> <i>Hometown:</i> <span> New Tork City, Unova </span> </li>
+              <li> <i>Current Residence:</i> <span> Castelia City, Unova </span> </li>
+              <li> <i>Traveling With:</i><span> None </span> </li>
+              <li> <i>Goal:</i><span> Stay Alive </span> </li>
+            </ul>
+          </div><!--biodata-->
+
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+            <h3>Synopsis</h3>
+            The son of Chili Griffith and Georgia Herrscher, and the oldest child for both. This Dark type trainer
+            originally wanted to become a member of Unova's Elite Four, but due to being the oldest in his family, he
+            instead stayed home to help Chili. Outside of work, Jeremy likes to hang out with his friends and spends
+            most of his time at the skatepark.
+
+            <h3>Personality</h3>
+            As the oldest child, Jeremy is very serious and often overprotective of his younger sisters. Unfortunately,
+            Jeremy doesn't always extend this towards other girls in his life. Despite his rough exterior, Jeremy is
+            still a good kid at heart, a hurt kid, but good. Growing up with a lot of instability in his life despite
+            Chili's best efforts forced Jeremy to step up and shoulder responsibilities at a young age.
+
+
+            <h3>Backstory</h3>
+            It was an unseasonably hot summer in Iccirus City the year Jeremy was born, even the hospital's industrial
+            air conditioners were fighting to give relief to the residents. It had been in the high ninties for three
+            days by the time Jeremy was born.
+
+            <p>From as far back as Jeremy can remember, it has always been him and his dad. Chili always reminds him
+              that it's not completely true, that for a long time they lived with his grandparents, Seneca and Fletcher.
+              And he does have pictures of him as a toddler with them- though he doesn't really remember them. Back
+              then, Chili and Jeremy used to share single room. He doesn't exactly remember what it was like, with just
+              him and his dad because by the time Jeremy was lucid, Isabella was already apart of his family unit.
+            <p>
+
+              Jeremy Juvie Arc where he comes home and thinks Tati had his baby
+
+          </div><!--biotxt-->
+        </div> <!--ccard-->
+
+
+        <!--Appearance-->
+        <div class="ccard g2" id="two">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Appearance</h2>
+            </center>
+          </div><!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Hair Color:</i> <span> Maroon, Cherry (Greying) </span> </li>
+              <li> <i>Eye Color:</i> <span> Grey </span> </li>
+              <li> <i>Hairstyle/Texture:</i> <span>Straight</span> <span>Cropped</span></li>
+              <li> <i>Skin Tone:</i> <span> Pale </span> </li>
+              <li> <i>Markings/Tattoos:</i> <span> See Below </span> </li>
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Accessories:</i> <span> See Below </span> </li>
+              <li> <i>Body Type:</i> <span> Lean </span> </li>
+              <li> <i>Shoe Size:</i> <span> 12 </span></li>
+              <li> <i>Style:</i><span> Punk </span> </li>
+              <li> <i>Makeup:</i><span> See Below </span> </li>
+            </ul>
+          </div><!--biodata-->
+
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+
+            Jeremy is tall and lean. Due to the instability of his upbringing, he's slightly malnourished and in the
+            lower end of weight for his height group. Despite this, Jeremy displays a natural athleticism. Although he
+            dropped out of highschool early into his sophomore year, he kept his grades up enough to play in the
+            school's baseball and boxing teams. He even made an attempt at football, but he prefers baseball. He is so
+            stressed out his hair is "greying" or rather, coming in pink in random patches throughout his head.
+
+
+            <h3>Scars:</h3>
+            Due to the sheer amount of fights Jeremy has participated in, he's got plenty of scars but they aren't seen
+            often. On the inside of both of his elbows, due to regularly donating plasma, Jeremy has small sunken scars.
+
+            <h3>Main Outfit:</h3>
+            <li><i>Jacket:</i> Leather Jacket with a crimson hoodie. Jeremy "won" (<s>stole</s>) his leather jacket
+              after a
+              fight at a bar.
+            <li><i>Shirt:</i> Black T-shirt with the sleeves cut off
+            <li><i>Jeans:</i> Light jeans
+            <li><i>Shoes:</i> Knock-off Black Converse
+            <li><i>Accessories:</i> Stainless steel hardware
+
+
+          </div><!--biotxt-->
+        </div> <!--ccard-->
+
+
+        <!--Med Information-->
+        <div class="ccard g3" id="three">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Medical Information</h2>
+            </center>
+
+          </div><!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Height:</i> <span> 6'0" </span> </li>
+              <li> <i>Weight:</i> <span> 180~ </span> </li>
+              <li> <i>Blood Type:</i> <span> B- </span> </li>
+              <li> <i>Allergies:</i> <span> See Below </span> </li>
+              <li> <i>Health:</i> <span>Strong</span> </li>
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Illnesses:</i> <span> I.E.D. </span> </li>
+              <li> <i>Physical Disability:</i> <span> None </span> </li>
+              <li> <i>Special Ability:</i><span> High Pain Tolerance </span> </li>
+              <li> <i>Dominant Hand:</i> <span>Right</span> </li>
+              <li> <i>Other:</i><span> None </span> </li>
+            </ul>
+          </div>
+
+          <div class="biotxt">
+            <!--biodata-->
+            <h3>Illnesses:</h3>
+            <li>Intermittent Explosive Disorder*
+            <li>Borderline Personality Disorder (?)
+              <p>
+                From a young age Jeremy had terrible fits that were uncontrollable, often sudden and unprovoked and
+                lasted for at the most, half an hour before they would stop due to fatigue. It often happens when Jeremy
+                is in high stress environments such as school, or situations where he gets easily overwhelmed, and often
+                times he can feel himself starting an episode.
+
+              <p>It is suspected by a.. previous child psychologist that this behavior aligns with Jeremy's home life
+                with the lack of security of food and shelter- even possible emotional abandonment. Suggestions of..
+                relocation.. were made. (They stopped going after being told that.) Although research from a local
+                library via outdated psychology textbooks has suggested that it is something that one grows out of,
+                unfortunately for Jeremy (and those around him) he is an exception, though he does have a self-claimed
+                “better grip.” He's prone to sudden outbursts of violence and uses sports as a.. creative outlet for his
+                anger.
+
+              <p>Due to having such intense mood swings, Jeremy often practices- fails, but practices in preparing
+                himself for how he's going to react and tries to appear emotionless. But in reality, he is a pretty
+                emotional guy. Due to being unable to regulate his own emotions it leaves him in a perpetual state of
+                fight-or-flight which in turns, makes it worse. He's suspected of having <b>borderline personality
+                  disorder</b> but Jer can neither care or afford the diagnostic testing and medications.
+
+            <li>PTSD</li>
+            <p>After Isabella's drowning incident when he was 11, Jeremy has recurring nightmares where he wasn't able
+              to save her. When he was younger he used to combat this by going into her room and reassuring himself she
+              was still there. Now that she's gone, he can't do that. He also has a fear of large bodies of water and
+              cannot handle the cold.
+
+
+          </div><!--biotxt-->
+
+        </div> <!--ccard-->
+
+
+        <!--Interests-->
+        <div class="ccard g4" id="four">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Interests</h2>
+            </center>
+
+          </div><!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Book Genre:</i> <span> ??? </span> </li>
+              <li> <i>Favorite Book:</i> <span> .... </span> </li>
+              <li> <i>Music Genre:</i> <span> Metalcore </span> </li>
+              <li> <i>Favorite Group:</i> <span> ISSUES </span> </li>
+              <li> <i>Transportation:</i> <span>Skateboard</span> </li>
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Type Preference:</i> <span> <img
+                    src="https://dl.dropbox.com/scl/fi/auvz7mzi7kwhs4esn2u9o/FightingIC_Tera.png?rlkey=ra1jwanty1ia6ywycapvtq217&st=5bh8fcdf&dl=0"><img
+                    src="https://dl.dropbox.com/scl/fi/5zh0noijc3rx662ljr9wp/FlyingIC_Tera.png?rlkey=lvikeuq3f4pbpxphlc8pq151v&dl=0">
+              </li>
+              <li> <i>Time Of Day:</i> <span> Evening </span> </li>
+              <li> <i>Favorite Color:</i><span> Purple </span> </li>
+              <li> <i>Favorite Food:</i><span> Nacho Fries </span> </li>
+              <li> <i>Languages:</i> <span>Unavi</span> </li>
+            </ul>
+
+          </div><!--biodata-->
+
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+            <h3>Likes:</h3>
+            <li> Cooking</li>
+            <li> Skateboarding
+            <li> Baseball
+            <li> Hot Dogs
+            <li> Sports Memorabilia
+            <li> Boxing
+            <li> Video Games
+            <li> Stealing
+            <li> Being Responsible
+            <li> Free Food
+            <li> Flying
+            <li> Sunsets / Sunrise
+            <li> Gummy Candies
+            <li> Pyrotechnics
+              <h3>Dislikes:</h3>
+            <li> Swimming
+            <li> Blood
+            <li> Needles
+            <li> Taking Responsibility
+            <li> Disappointing Others
+            <li> Boats
+            <li> School
+            <li> Cowards
+            <li> Bullies
+            <li> Sudden Loud Noises
+              <h3>Fears:</h3>
+            <li> Drowning
+            <li> Abandonment
+            <li> Disappointment
+            <li> Starving
+              <h3>Habits:</h3>
+            <li> Jeremy automatically reverts to using polite terms "ma'am" and "sir" and others when addressing anyone
+              older than himself, even if he doesn't particulary care to be polite to the person.
+            <li> When nervous, bored, mad, Jeremy has a habit to play with the rings on his fingers. Jeremy is never
+              seen without them.
+            <li> Jeremy doesn't nap, he will often just lay awake in silence to "recharge." He stopped napping after
+              Bella drowned.
+            <li> He's constantly on guard, highly aware of sounds and movements around him. He's a light sleeper.
+              <h3>Extra:</h3>
+            <li> Despite having a fear of needles and blood, Jeremy regularly donates plasma for extra cash.
+            <li> Jeremy sometimes has terrible judgement.
+            <li> Chili and Jeremy share a room and a bed, but often don't sleep at the same times due to conflicting
+              schedules. (Thank Goodness. - J.) Jeremy was probably around nine the last time they officially shared the
+              bed.
+
+          </div><!--biotxt-->
+
+
+        </div> <!--ccard-->
+
+
+        <!--Family-->
+        <div class="ccard g5" id="five">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Relationships</h2>
+            </center>
+
+          </div><!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Status:</i> <span> Single </span> </li>
+              <li> <i>Sexuality:</i> <span> Straight </span> </li>
+              <li> <i>Best Friend:</i> <span> </span> </li>
+              <li> <i>Friends:</i> <span> </span> </li>
+              <li> <i>Love Interest:</i> <span> Tatia, Sterling </span> </li>
+
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Main Rival(s):</i> <span> Jet, Tommen </span> </li>
+              <li> <i>Mentor(s):</i> <span> Paul Weiss Sr., May Weiss </span> </li>
+              <li> <i>Allies:</i><span> </span> </li>
+              <li> <i>Enemies:</i><span> Everyone </span> </li>
+              <li> <i>Heroes:</i> <span>None</span> </li>
+            </ul>
+          </div><!--biodata-->
+
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+            <center>
+              <h4>Here you will find most, if not all, of Jeremy's family members! <br><a
+                  href="https://familyecho.com/?p=WAIAO&c=nwuonkqule&f=986125960729172880">Click here</a> for the full,
+                updated family tree!</h4>
+            </center>
+            <b>Father:</b> Chili Griffith<br>
+            <b>Mother:</b> <span>Georgia Herrscher, née Clarkson <i>(Estranged)</i></span><br>
+            <b>Step-Father:</b> <span>Shamus Herrscher <i>(Restraining Order)</i></span><br>
+            <b>Younger Sister:</b> Annabelle Griffith<br>
+            <b>Younger Sister:</b> Isabella Griffith<br>
+            <b>Younger Half-Brother:</b> <span>Iwan Herrscher <i>(Estranged)</i></span><br>
+            <b>Younger Half-Sister:</b> <span>Iúile Herrscher <i>(Estranged)</i></span><br>
+            <b>Grandmother:</b> Seneca Griffith, née Lily <i>(Deceased 2025)</i><br>
+            <b>Grandfather:</b> Fletcher Griffith <i>(Deceased 2025)</i><br>
+            <b>Uncle:</b> <span>Cress Griffith <i>(Estranged)</i></span><br>
+            <b>Uncle:</b> <span>Cilan Griffith <i>(Estranged)</i></span><br>
+            <b>Aunt:</b> <span>Ariana Elle Griffith, née Sinclair <i>(Estranged)</i></span><br>
+            <b>Cousin:</b> <span>Claudia Griffith <i>(Estranged)</i></span><br>
+            <b>Cousin:</b> <span>Estelle Griffith <i>(Estranged)</i></span><br>
+            <b>Cousin:</b> <span>Sophia Griffith <i>(Estranged)</i></span><br>
+
+
+            <center>
+              <h4>Jeremy's notable relationships.</h4>
+            </center>
+            <div class="titem">
+              <div class="event">
+                <h3>Chili Griffith</h3>
+                Jeremy's father. While Chili and Jeremy often don't see eye to eye when it comes to Jeremy's future (and
+                wasted potential in school), they love each over very deeply and do their best to work together in order
+                to make ends meet for the family. Growing up, Chili did his best to model responsibility, family, and
+                duty to Jeremy. But watching his father struggle from day to day, Jeremy began to see that his father
+                wasn't as perfect as he thought he was. This led Jeremy to secretly hold resentment for his uncles, who
+                "never" made an effort to help Chili. Despite everything, Jeremy is very protective when it comes to his
+                father.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3>Georgia Herrscher</h3>
+                Jeremy's mother. She may have given birth to him but she is not his mother.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3>Annabelle Griffith</h3>
+                Jeremy's younger sister. Despite Anna's late arrival into his life, Jeremy felt an immediate sense of
+                responsibility for her. The two butt heads from time to time but quickly forgive each other and will
+                always take each other's side when in an argument with an outsider. Anna sometimes feels the need to
+                give him unwarranted advice in the same way that she never listens to advice he gives her.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3>Isabella Griffith</h3>
+                Jeremy's younger sister. Jeremy loves Isabella deeply, for as long as he can remember she has always
+                been around for him. She's his youngest sister and not to be that guy, but she's his favorite sister.
+                Jeremy has fond memories of his childhood with Isabella. Two of the worst days of his entire life that
+                come to mind is when he saved her from drowning and when she ran away to start her journey. Jeremy
+                nearly followed her to Kalos but didn't after Anna convinced him that she would be okay on her own. He
+                still worries
+                about her and does his best to keep in contact with her and send her money when he can.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3>Tatia Weiss</h3>
+                Jeremy's girlfriend. From their first meeting Jeremy was enamored with Tatia, and she was his first
+                official girlfriend. Now, Jeremy will admit, he wasn't the perfect boyfriend- but not to point fingers,
+                Tatia wasn't exactly a perfect girlfriend either. He loved her so much it was driving him crazy. They
+                were volatile, destined even. And on and off so often that Jeremy would forget if they were dating or if
+                they were on a break. Doesn't matter- they couldn't keep away from each other anyways. Now, regrettably,
+                it's over and he still loves her.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3>Sterling Fontaine</h3>
+                Jeremy's love interest. There's always that rule in that you should never date your sister's best friend
+                because it not only ruins their friendship, but that it ruins your relationship with your sibling.
+                Jeremy never cared too much for that. Sterling was fun and kind for someone of her... background. And
+                that's what she wanted, and what Jeremy wanted. They'd both ended relationships for the summer season
+                and found each other, but it wasn't serious enough for them to want to stay together... right?
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/Spinner">Spinner D'Amore</a></h3>
+                Jeremy's friend. Even from their first meeting, Jeremy could tell that Spinner was a good guy.. just,
+                not a good guy. Jeremy likes how respectful and responsible he is. He liked the way Spinner treated
+                Anna, how he cared for her. He also admired just how cool he was, how he didn't take himself too
+                seriously. He couldn't even be mad about Spinner's line of work, at least he had a job. A job is job,
+                Jeremy respected the hustle.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/Paul">Paulus Weiss Sr.</a></h3>
+                Jeremy's "surrogate" father. While the two originally had gotten off on the wrong foot for the crime of
+                dating his daughter Tatia, Jeremy quickly began to look to Paul as a father figure. Not that
+                there was anything wrong with his own, Paul was just different. He's someone that Jeremy really
+                respects. Even after Tatia moved on from him, her family has never turned him away when he needed them.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/May">May Weiss</a></h3>
+                Jeremy's mentor. During the sporadic periods that Jeremy and Tatia dated, he grew close to all of the
+                members of her large, rowdy, loving family. Mrs. Weiss was a home cook who had gone to school to be
+                professionally trained, in that way Jeremy found her similar to Chili, and it was comforting. Throughout
+                his relationship with Tatia, Mrs. Weiss had noticed her dishes deviate slightly from her mental
+                receipes. Finally, she caught him doctoring her dishes when he thought no one was paying attention.
+                Before he knew it, she had taken him under her wing and began to support his culinary dreams.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3>Cilan & Cress Griffith</h3>
+                Jeremy's uncles. Just some rich fucks who forgot what the word "family" really means. Jeremy hasn't seen
+                either of them since he was 'bout 12 years old, and he hopes he never sees them again. He doesn't have
+                good relationships with his cousins either. And don't even get him started on his aunt Aria.
+              </div>
+            </div>
+
+
+          </div><!--biotxt-->
+
+        </div> <!--ccard-->
+
+
+        <!--Timeline-->
+        <div class="ccard g7" id="six">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Timeline</h2>
+            </center>
+
+          </div><!--headline-->
+
+          <!--TIMELINE-->
+          <div class="timeline">
+            <center>
+              <h4>Here is a semi-detailed timeline of Jeremy's life!</h4>
+            </center>
+
+            <div class="titem">
+              <div class="event">
+                <h0>July 19th, 2018 - Jeremy is born. </h0><br>
+                On the 19th day, a baby boy is born to Georgia Clarkson and Chili Griffith at Iccirus Medical Center @
+                9:59 P.M. in Iccirus City, Unova. Chili is not present for his birth nor did he have any idea that
+                Georgia was pregnant. While excited to meet him, Georgia quickly realizes that she is in over her head
+                but chalks it up to nerves. She struggles to have a connection with her new baby.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>August 7th, 2018 - T-168.</h0><br>
+                It's an unfortunate tuesday morning for Chili, he has missed his alarm, spilled egg yolk on his new
+                shirt and it is his first day at new job. The rocky start to his day has given him anxiety, despite the
+                setback he powers though and manages to make it to work with five minutes to spare. Halfway though his
+                day, Chili recieves a distressed call from his sister in law Aria, telling him to come home. Not wanting
+                to make a bad impression, Chili stays the entire day- shutting off his phone. By the time he is on the
+                bus home, he's missed at least 20 calls from Aria and his brother Cilan. Once he's home he's met with
+                Georgia.. and a baby. Georgia quickly explains that he's the father of her baby.. and tells him that she
+                wants nothing to do with either of them. Five minutes later Georgia leaves and Chili is left with an
+                unnamed baby boy and only a week's worth of formula.
+              </div>
+            </div>
+
+
+            <div class="titem">
+              <div class="event">
+                <h0>November 24th, 2018 - Sign your life away.</h0><br>
+                The adjustment period of being a new parent hit Chili like a train and lasted longer than expected. But
+                it wasn't terrible.
+                While Chili loved his baby almost instantly, he hadn't been able to find a name that suited the baby
+                yet. Despite Cilan warning Chili that he wouldn't be able to help with the baby, Aria was willing to
+                bend the rules a bit and help him. After a few weeks of caring for Jeremy with the help of Aria, Chili
+                finally came to the conclusion that he would keep his son. The birth certificate stamped with ink
+                imprints of the boy's feet had been sitting on his desk for months. He'd been trying out names for some
+                time, changing every few days or so before finally he realized that the baby responded to one name.
+                Jeremy. Chili filled in the baby's name box and signed the certificate so he could take it to be
+                finalized..
+              </div>
+            </div>
+
+
+            <div class="titem">
+              <div class="event">
+                <center>
+                  <h4>With what seemed to be almost no warning- or maybe Chili had just been so busy it had slipped his
+                    mind, Cilan and Aria began the process to move to Lumiose City, Kalos. Up until then, Aria had been
+                    Chili's trusted babysitter as she hadn't minded- <i>or he thought she hadn't minded</i> taking care
+                    of Jeremy while Chili was at work. He'd been paying her, just what he could afford to pay her and
+                    she was a lot of help, but Cilan had been firm on not helping Chili with Jeremy's necessities.
+
+                    <p>By April, Cilan and Aria had completed their move, leaving Chili and Jeremy in the home they had
+                      all shared. After moving twice, Chili finally cut his losses and packed the family for New Tork
+                      City so they could move in with his parents in order to be more financially stable and because his
+                      parents, Seneca and Fletcher had been watching over Jeremy. It was just easier to live with them,
+                      and allowed him and Jer to sleep in due to grandma and grandpa being across the hall rather than
+                      across the city.
+                  </h4>
+                </center>
+
+              </div>
+            </div>
+
+
+            <div class="titem">
+              <div class="event">
+                <h0>December 18th, 2020 - Isabella is brought home.</h0><br>
+                The winter season meant the Griffith household was full of family now, especially with Cilan and Aria
+                bringing along the newest addition of the family- Claudia. When Chili had gotten the call the night
+                before, he'd been nervous to tell anyone and instead decided to leave the house early in order to pick
+                up Isabella. After coming home with her it was well, a shock to the entire family, especially since this
+                time she wasn't even Chili's. Aria in particular.. got.. upset that attention Claudia was recieving was
+                stolen by a new baby girl. Jeremy already loved her, stopping his games every once and while to go and
+                stare at his baby sister.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>Fletcher gets diagnosed with cancer..</h0><br>
+                It became harder to deal with Jeremy's grandparents as they grew older, they had become forgetful and
+                were a sobering reality for Chili as he realized he could no longer leave them alone with the kids for
+                long periods of time. When his father got sick with cancer, it put an even bigger strain on his limited
+                resources. Thankfully his mother was still lucid enough to accompany him to his appointments but this
+                forced Chili to send Jeremy and Isabella to daycare after school. Despite working, the bills began to
+                pile up.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>SUMMER, 2025 - Lumi-no!</h0><br>
+                With the end of the school year in May marks the beginning of summer break. Jeremy and Bella's vacation
+                started at New Tork's airport and ended in Lumiose City. When Cilan and Aria offered to take the kids
+                for the summer, Chili jumped at the opportunity to take care of his family and catch up on bills-
+                especially daycare services, that had begun to pile up. The months leading up to the summer had hit him
+                particulary hard making ends meet and slowly they had begun to rely more and more on the local food bank
+                in downtown New Tork. After only a week in Lumiose, a an unexpected fight has Chili bring home Jeremy
+                and Isabella early.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>2025 - Fletcher dies.</h0><br>
+                The insurance payout is only so much, and barely gets them far enough to last them two months. Suddenly
+                and without warning, Seneca contracts the flu and dies. Chili loses his job out of grief, and thus
+                begins the battle of making ends meet.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>June 12th, 2029 - Family Introduction.</h0><br>
+                Annabelle is introduced to the family.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>December 7th, 2029 - The Drowning.
+                </h0><br>
+                Seconds. "That's all it takes." It's something Jeremy had heard over and over growing up, that it only
+                takes seconds. The morning of Anna's adoption hearing Chili had woken him early so Jeremy could lock the
+                door behind him. Jeremy stayed up for a bit after they left to get some chores done around the apartment
+                before going back to bed. A few hours later, Jeremy finally dragged himself out of bed to make himself
+                and Bella breakfast, after calling for her three seperate times he went to check her room. Not finding
+                her, Jeremy hurried outside to see if he could find her, thankfully she and Simisear were skating on the
+                pool which had frozen.
+
+                <p>After calling her in for breakfast, Jeremy headed back in to finish serving the food. After waiting
+                  another minute or two, Jeremy pulled on a jacket and headed back out outside- only this time Bella
+                  wasn't anywhere to be seen. Simisear was running around the pool anxiously... and the ice was cracked.
+                  Immediately Jeremy began running down the stairs, and across the court before jumping the fence.
+                  Without hesitation, Jeremy jumped into the pool. The cold shocked him enough that he released all his
+                  air and he hurried back up for a second before diving back down to pull her out. After about five
+                  minutes of cpr, Bella finally threw up what seemed like half of the pool.
+                <p>While breathing, Bella was still blue and barely conscious so Jeremy picked her up and hurried to the
+                  nearest hospital. Once they arrived Jeremy was given dry clothes, socks, warm blankets and hot
+                  chocolate as he waited for the doctors to finish working on her. The nurses all called him a hero
+                  while reassuring him that it wasn't anybody's fault that this happened.</p>
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>March 25th, 2031 - Fateful Encounters.</h0><br>
+                Tatia meets Jeremy while attending Isabella's Figure Skating Competition. Initially the two do not get
+                along, but by the end of the competition, they both team up to cheer Isabella on.
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>November 15th, 2031 - Are We Going Together?</h0><br>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>2035 - Grand Slam</h0><br>
+                After learning from Isabella about how cold Shamus and Georgia were to her when she was 10, before she
+                ran away to Kalos, Jeremy decides that their punishment is long overdue. Jeremy calls all his old
+                baseball teammates, and some of his wrestling and skating friends and in broad daylight destroy the cars
+                that are parked in the driveway of the Herrscher estate.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>Forward Motion - AKA, Spinner teaches Jeremy how to use a gun.</h0><br>
+
+              </div>
+            </div>
+
+          </div><!--timeline-->
+        </div> <!--ccard-->
+
+
+        <!--Trivia-->
+        <div class="ccard g8" id="seven">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Trivia</h2>
+            </center>
+
+          </div><!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Japanese Name:</i> <span> Miyano Zankoku (残酷)</span> </li>
+              <li> <i>Voice Claim:</i> <span> Douglas Booth </span> </li>
+              <li> <i>Japanese Voice Claim:</i> <span> Nobuhiko Okamoto </span> </li>
+              <li> <i>Accent:</i><span> New York </span> </li>
+              <li> <i>Catchphrase:</i> <span> </span> </li>
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Pokémon Zodiac:</i> <span> Crustle </span> </li>
+              <li> <i>Star Sign:</i> <span> Cancer </span> </li>
+              <li> <i>Birth Flower:</i> <span>Larkspur</span> </li>
+              <li> <i>Floriography:</i> <span>Wickedness, Horror</span> <span><b>Mandrake</b></span> </li>
+              <li> <i>Personality Type:</i><span> ESTP </span> </li>
+            </ul>
+          </div><!--biodata-->
+
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+            <li> His original name was Landon before I settled on Jeremiah! So now Landon is just his middle name!</li>
+            <li> Jeremy shares a room with his father up until they move to Castelia City and he and Anna get their own
+              rooms now that Isabella is permanently staying in Kalos.</li>
+            <li> Jeremy's typical position in Baseball is shortstop, but he is also a skilled hitter.</li>
+            <li> Jeremy is a huge fan of the New Tork Durants, the "better" of New Tork's two baseball teams.
+            <li> Jeremy has a prized silver baseball bat signed by one of the 2026 Durants draftees, pitcher Clark
+              Pospishil.
+            <li> His face claim is <i><a
+                  href="https://64.media.tumblr.com/e2f11c3ad7a01494428bcf8c29082493/96bc59bb1df7198a-13/s1280x1920/fb931394ed79a80e6e8c6079889bb856d299c484.png">Mark
+                  McKenna</a></i> from <b><a
+                  href="https://64.media.tumblr.com/f83e421d718115932bcdb9a3d792eb51/96bc59bb1df7198a-40/s1280x1920/de55e20f30e720c275b9f415a404095d8e9239b1.png">Wayne.</a></b>
+            <li> Jeremy has a lot of hometown loyalty to New Tork and Castelia City.
+            <li> Jeremy loves stealing. Growing up with a set limit for groceries led to Jeremy becoming a bit of a
+              kleptomanic with groceries.
+            <li> Can jump nearly any fence, has extremely strong wrists and ankles. 
+            <li>
+            <li>
+
+          </div><!--biotxt-->
+
+
+
+        </div> <!--ccard-->
+
+
+        <!--Pokémon-->
+        <div class="ccard g9" id="eight">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Pokemon</h2>
+            </center>
+
+          </div><!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Starter Pokémon:</i> <span> Alcremie </span> </li>
+              <li> <i>Main Pokémon:</i> <span> Absol </span> </li>
+              <li> <i>Secondary Pokémon:</i> <span> Mightyena </span> </li>
+              <li> <i>Mega Pokémon:</i> <span> Absol </span> </li>
+              <li> <i>Gigantamax: </i> <span>None</span> </li>
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Ride Pokémon:</i> <span> </span> </li>
+              <li> <i>Service Pokémon:</i> <span> </span> </li>
+              <li> <i>Shiny Pokémon:</i><span> </span> </li>
+              <li> <i>Befriended Pokémon:</i><span> </span> </li>
+              <li> <i>Mascot:</i> <span>Mightyena</span> </li>
+            </ul>
+          </div><!--biodata-->
+
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+            <h3>Owned:</h3>
+            <center>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/mightyena.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/morgrem.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/mandibuzz.png" </a>
+              <br>
+
+            </center>
+          </div><!--biotxt-->
+
+        </div> <!--ccard-->
+
+
+
+      </section><!--wrapper-->
+    </div><!--container-->
+  </div><!--outer-->
+
+
+  <!--SCRIPTS
+ DON'T MESS WITH THE SCRIPTS UNLESS YOU KNOW WHAT YOU'RE DOING-->
+  <script>
+    $(document).ready(function () {
+
+      /*CCARD COLORS*/
+      $('.ccard').each(function () {
+        var groupClass = $(this).attr('class').split(" ")[1];
+
+        $(this).find('.cell1').addClass(groupClass);
+        $(this).find('.cell2').addClass(groupClass);
+        $(this).find('.ctags').addClass(groupClass);
+      });
+
+      /*CARDS*/
+      $('.cl').on('click', function (e) {
+        var currentAttrValue = $(this).attr('href');
+        var groupClass = $('.ccard' + currentAttrValue).attr('class').split(" ")[1];
+
+        window.location.hash = $(this).attr('href');
+        $('.ccard' + currentAttrValue).addClass('active').siblings('.ccard').removeClass('active');
+        $(this).addClass('active').siblings('.cl').removeClass('active');
+      });
+
+      /*HASH SCRIPT*/
+      var hash = $.trim(window.location.hash);
+
+      if (hash) {
+        $('.cl[href$="' + hash + '"]').trigger('click');
+      };
+
+
+      /*TOOLTIPS*/
+      $(function () {
+        $(".ccard").tooltip({
+          classes: {
+            "ui-tooltip": "tooltip"
+          },
+          position: {
+            my: "right bottom",
+            at: "right top",
+            collision: "none"
+          },
+        });
+      });
+
+    }); //DOCUMENT READY
+
+  </script>
+
+  <!--
+        MUSIC PLAYER #03 by glenthemes
+        ♬ glenthpvs.tumblr.com/player03
+--->
+
+  <link href="//fonts.googleapis.com/css?family=Public+Sans|Karla" rel="stylesheet">
+  <link href="//glenthemes.github.io/-music-/glenplayer03.css" rel="stylesheet">
+  <script src="//glenthemes.github.io/-music-/glenplayer03.js"></script>
+
+  <style element="glenplayer03">
+    :root {
+      --MusicBox-Left-Or-Right: right;
+      --MusicBox-Edge-Distance: 50px;
+
+      --MusicBox-Width: 250px;
+
+      --MusicBox-Title-Padding: 15px;
+      --MusicBox-Title-Background: -webkit-linear-gradient(left, var(--g12) 0%, var(--color) 50%, var(--g1) 100%);
+      --MusicBox-Title-Size: 10px;
+      --MusicBox-Title-Color: var(--cards);
+      --MusicBox-Title-Corner-Roundness: 0px;
+
+      --MusicBox-Main-Background: var(--box);
+      --MusicBox-Main-Padding: 14px;
+      --MusicBox-Side-Borders: var(--border);
+
+      --Album-Art-Size: 32px;
+      --Album-Art-Corner-Roundness: 3px;
+      --Album-Art-Gap: 10px;
+
+      --Song-Name-Size: 9px;
+      --Song-Name-Color: var(--text);
+
+      --Artist-Name-Size: 10px;
+      --Artist-Name-Color: var(--text);
+
+      --Music-Buttons-Size: 11px;
+      --Music-Buttons-Color: var(--text);
+      --MusicPlayer-Scrollbar-Color: #e4e4e7;
+      /* doesn't work on firefox */
+
+      --Track-Spacing: 9px;
+
+      --Autoplay-First-Song: no;
+      --Autoplay-Next-Song: yes;
+      --Loop-Playlist-Infinitely: no;
+    }
+  </style>
+
+  <div glenplayer03>
+    <div musicbox-title>music box</div>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>I'm Eighteen</div>
+    <div artist-name>Alice Cooper</div>
+
+    <audio
+      src="https://dl.dropbox.com/scl/fi/ed4tnc2ldj8xinlauls80/Alice_Cooper_-_Im_Eighteen.mp3?rlkey=7bq43p0r6njkfrr9wgbbzash8"></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Round and Round</div>
+    <div artist-name>Aerosmith</div>
+
+    <audio
+      src="https://dl.dropbox.com/scl/fi/n2eaz4gsxez8r3oafphs1/Aerosmith_-_Round_and_Round.mp3?rlkey=4ihdn5p67wigginprh4fway9t"></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+    <div song-name>Hooligans</div>
+    <div artist-name>Issues</div>
+
+    <audio
+      src="https://dl.dropbox.com/scl/fi/rjnv8osfe39zh3n65bh4x/Issues_-_Hooligans.mp3?rlkey=9o0mx3ux0cr3ej9pe9tbnnkk8"></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Anna Molly</div>
+    <div artist-name>Incubus</div>
+
+    <audio
+      src="https://dl.dropbox.com/scl/fi/b2knhs1xr6exlb1kaxlsw/Incubus_-_Anna_Molly.mp3?rlkey=hswuew46erlttecmanpa9e0ap"></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Butterflies (pt. 2)</div>
+    <div artist-name>Lana Del Rey</div>
+
+    <audio
+      src="https://dl.dropbox.com/scl/fi/12gfrfd88a9h2mvusorga/Lana_Del_Rey_-_Butterflies_pt.2.mp3?rlkey=14zoa3y2lwt5wbtl6e74iuwzn"></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Full Nelson</div>
+    <div artist-name>Limp Bizkit</div>
+
+    <audio
+      src="https://dl.dropbox.com/scl/fi/ss3y2qs5kjnru3v9za0y6/Limp-Bizkit-Full-Nelson.mp3?rlkey=jm0iyr5qv8vh9wcjvt1wopr2n"></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>The Pretender</div>
+    <div artist-name>Foo Fighters</div>
+
+    <audio
+      src="https://dl.dropbox.com/scl/fi/czr9agc76kkwjvm8xqlwg/Foo_Fighters_-_The_Pretender.mp3?rlkey=npnzpu2vahu40rsivmmr460yi"></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Hit The Floor</div>
+    <div artist-name>Linkin Park</div>
+
+    <audio
+      src="https://dl.dropbox.com/scl/fi/k8o3xkv5x8qspcfrldnw6/Linkin_Park_-_Hit_The_Floor.mp3?rlkey=vgh7zilwcw5n1q69xe04e47im"></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Her Monolouge</div>
+    <div artist-name>Issues (ft. STP)</div>
+
+    <audio
+      src="https://dl.dropbox.com/scl/fi/1g6nxvq77uekpnjjoem76/Issues_-_Her_Monologue_ft._Snow_Tha_Product.mp3?rlkey=vzmox130idmdppnn9k28wtmbg"></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Even Flow</div>
+    <div artist-name>Pearl Jam</div>
+
+    <audio
+      src="https://dl.dropbox.com/scl/fi/3at9z2zb02heeeuwfipn2/Pearl_Jam_-_Even_Flow.mp3?rlkey=l3qiqy9nxfsgy2qizepq6gl1y"></audio>
+
+  </div><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img
+      src="https://c.statcounter.com/12549123/0/c1f866bd/1/" alt="Web Analytics Made Easy - Statcounter"
+      referrerPolicy="no-referrer-when-downgrade"></a>
+
+</body>
+
+</html>
