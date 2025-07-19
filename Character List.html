@@ -1,0 +1,1873 @@
+<!doctype html>
+
+<!--theme by raven at ikilledtherpc don't be a dick --->
+
+<html>
+
+<head>
+
+    <title>Characters</title>
+
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />{/block:Description}
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <!--fontawesome-->
+    <link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- filter scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="//unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // init Isotope
+            var $grid = $('.grid').isotope({
+                itemSelector: '.grid-item',
+                masonry: {
+                    columnWidth: 250,
+                    fitWidth: true,
+                    gutter: 3
+                },
+                hiddenStyle: {
+                    opacity: 0
+                },
+                visibleStyle: {
+                    opacity: 1
+                },
+                transitionDuration: '0.5s'
+            });
+            // layout Isotope after each image loads
+            $grid.imagesLoaded().progress(function () {
+                $grid.isotope('layout');
+            });
+            // store filter for each group
+            var filters = {};
+            $('.filters').on('click', '.button', function () {
+                var $this = $(this);
+                // get group key
+                var $buttonGroup = $this.parents('.button-group');
+                var filterGroup = $buttonGroup.attr('data-filter-group');
+                // set filter for group
+                filters[filterGroup] = $this.attr('data-filter');
+                // combine filters
+                var filterValue = concatValues(filters);
+                // set filter for Isotope
+                $grid.isotope({
+                    filter: filterValue
+                });
+            });
+            // change is-checked class on buttons
+            $('.button-group').each(function (i, buttonGroup) {
+                var $buttonGroup = $(buttonGroup);
+                $buttonGroup.on('click', 'button', function () {
+                    $buttonGroup.find('.is-checked').removeClass('is-checked');
+                    $(this).addClass('is-checked');
+                });
+            });
+        });
+        // flatten object by concatting values
+        function concatValues(obj) {
+            var value = '';
+            for (var prop in obj) {
+                value += obj[prop];
+            }
+            return value;
+        }
+    </script>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+
+    <link rel="stylesheet"
+        href="https://dl.dropbox.com/scl/fi/xrk7fgq72ovmtsfnsuga5/Hosting-Profile-Page.css?rlkey=e2xyiuvudj31b4jgb47exgb8c&dl=0">
+
+    <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img
+            src="https://c.statcounter.com/12549123/0/c1f866bd/1/" alt="Web Analytics Made Easy - Statcounter"
+            referrerPolicy="no-referrer-when-downgrade"></a>
+
+</head>
+
+<body>
+
+    <!-----------------------------HEADER----------------------------->
+
+    <header>
+        <h1>CHARACTERS</h1>
+        <div class="desc">
+            You'll find all of the profiles for the characters here on this page. You can use the tags to filter through
+            the profiles! All of the photos link to the full profile! If you have any questions, you can send me an ask!
+            <br><br><button class="back" onclick="goBack()"><i aria-hidden="true"
+                    class="fa fa-chevron-left"></i>&nbsp;Go Back.</button>
+        </div>
+    </header>
+
+    <!-----------------------------SIDEBAR----------------------------->
+
+    <nav data-0="padding-top:300px;overflow:hidden;" data-250="padding-top:70px; overflow:auto;">
+        <div class="filters">
+
+            <!-- category one --->
+
+            <!--    DROPDOWN LIST BEGINS -->
+            <div class="button-group" data-filter-group="gender">
+                <h3>TYPE</h3>
+                <button class="button is-checked" data-filter="">all</button>
+                <button class="button" data-filter=".mini">Mini</button>
+                <button class="button" data-filter=".comp">Complete</button>
+
+            </div>
+            <!--    DROPDOWN LIST ENDS   -->
+            <!--    DROPDOWN LIST BEGINS -->
+            <div class="button-group" data-filter-group="gender">
+                <h3>GENDER</h3>
+                <button class="button is-checked" data-filter="">all</button>
+                <button class="button" data-filter=".female">Female</button>
+                <button class="button" data-filter=".male">Male</button>
+                <button class="button" data-filter=".nonbinary">Non-Binary</button>
+            </div>
+            <!--    DROPDOWN LIST ENDS   -->
+            <!--    DROPDOWN LIST BEGINS -->
+            <div class="button-group" data-filter-group="region">
+                <h3>REGION</h3>
+                <button class="button is-checked" data-filter="">all</button>
+                <button class="button" data-filter=".kanto">Kanto</button>
+                <button class="button" data-filter=".johto">Johto</button>
+                <button class="button" data-filter=".hoenn">Hoenn</button>
+                <button class="button" data-filter=".sinnoh">Sinnoh</button>
+                <button class="button" data-filter=".unova">Unova</button>
+                <button class="button" data-filter=".kalos">Kalos</button>
+                <button class="button" data-filter=".alola">Alola</button>
+                <button class="button" data-filter=".galar">Galar</button>
+            </div>
+            <!--    DROPDOWN LIST ENDS -->
+
+
+        </div>
+    </nav>
+
+    <!---------------------------MAIN CONTENT--------------------------->
+
+    <main>
+        <div class="grid">
+
+            <a href="/Lorenzo">
+                <div class="grid-item all mini male sinnoh">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Paulus Weiss Jr</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>August 14th, 2016</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b>Musician</b><br>
+                            <span>Parents:</span> <b>Ash, May & Paul</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Aleksander">
+                <div class="grid-item all mini male sinnoh">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Aleksander Weiss</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>November 28th, 2017</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b>Artist</b><br>
+                            <span>Parents:</span> <b>Ash, May & Paul</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Cesaire">
+                <div class="grid-item all male mini sinnoh ">
+                    <figure><img
+                            src="https://64.media.tumblr.com/c409a871b806b1bfa9270500cf992ebe/9844d37cdfad0d6a-2a/s500x750/77cfd91958cbd4ba24038dfb73119fa1fbe76132.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Cesaire Weiss</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>October 25th, 2018</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b>Researcher</b><br>
+                            <span>Parents:</span> <b>Ash, May & Paul</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Tatia">
+                <div class="grid-item  mini female sinnoh">
+                    <figure><img
+                            src="https://64.media.tumblr.com/4d140a29b524fdb226bbab596a225132/9844d37cdfad0d6a-f6/s500x750/daa178f0f08c7620750b71d41a1225cf3ee160f3.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Tatia Weiss</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>January 8th, 2020</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b>Student</b><br>
+                            <span>Parents:</span> <b>Ash, May & Paul</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Lianthe">
+                <div class="grid-item all sinnoh female mini">
+                    <figure><img
+                            src="https://64.media.tumblr.com/625f97f8073b184634e59d69e189974d/c04684caeeb9315e-f6/s500x750/5ae05c8426b5bac77b9201b9725d39f124dbb20d.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Lianthe Weiss</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>January 10th, 2020</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b>Trainer, Aspiring Actress</b><br>
+                            <span>Parents:</span> <b>May, Ash & Paul, <s>Drew</s></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Niklaus">
+                <div class="grid-item all male sinnoh mini">
+                    <figure><img
+                            src="https://64.media.tumblr.com/801d7c30bd9e99cd49003fdb966e5ec9/9844d37cdfad0d6a-b8/s400x600/bccd7fd365877fc133d0e39a7a3231a891cc625d.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Niklaus Weiss</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>December 16th, 2024</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b>Performer</b><br>
+                            <span>Parents:</span> <b>Ash, May & Paul</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Convallaria">
+                <div class="grid-item all mini female galar">
+                    <figure><img
+                            src="https://64.media.tumblr.com/c912ad3d4d139a447b347969ebe86b0d/c04684caeeb9315e-29/s500x750/daad6f267507eeff309f6099b048df18b435a87a.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Convallaria Weiss</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>May 31st, 2035</b><br>
+                            <span>Region:</span> <b>Galar</b><br>
+                            <span>Class:</span> <b>Trainer</b><br>
+                            <span>Parents:</span> <b>Ash, May & Paul</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--
+            <a href="/Bran">
+                <div class="grid-item all male sinnoh mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Brandon Weiss</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>March 12th, 2011</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b>Reggie & May Daisy</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Elaine Weiss</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>December 19th, 2020</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b>Reggie & May Daisy</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Tommen Oak</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>December 7th, 2018</b><br>
+                            <span>Region:</span> <b>Kalos</b><br>
+                            <span>Class:</span> <b>Student</b><br>
+                            <span>Parents:</span> <b>Gary & Miette</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+-->
+            <a href="/annika">
+                <div class="grid-item all mini female kalos">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Annika Oak</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>March 22nd, 2020</b><br>
+                            <span>Region:</span> <b>Kalos</b><br>
+                            <span>Class:</span> <b>Figure Skater</b><br>
+                            <span>Parents:</span> <b>Gary & Miette</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/aurora">
+                <div class="grid-item all nonbinary kalos mini">
+                    <figure><img
+                            src="https://64.media.tumblr.com/d018de824fca94fc149deb8f3fed5304/828bc9cb46d82089-a4/s500x750/d63a422b078a35d0834f929dc5cf6a23f8acd855.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Aurora Oak</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>March 22nd, 2020</b><br>
+                            <span>Region:</span> <b>Kalos</b><br>
+                            <span>Class:</span> <b>Lab Assistant</b><br>
+                            <span>Parents:</span> <b>Gary & Miette</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Torrance Oak</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>September 2nd, 2024</b><br>
+                            <span>Region:</span> <b>Kalos</b><br>
+                            <span>Class:</span> <b>Photographer</b><br>
+                            <span>Parents:</span> <b>Gary & Miette</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+-->
+            <a href="/Summer">
+                <div class="grid-item  female kanto comp">
+                    <figure><img
+                            src="https://64.media.tumblr.com/d23b6257d49329e942cbc40c681a2c22/c04684caeeb9315e-9e/s500x750/1f215cd8731d623a67fe9d0e05e34c69733820eb.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Summer Harrison</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>July 13th, 2016</b><br>
+                            <span>Region:</span> <b>Kanto</b><br>
+                            <span>Class:</span> <b>Gym Leader</b><br>
+                            <span>Parents:</span> <b>Brock & Joy, <s>Misty</s></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Damon Harrison</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>October 3rd, 2021</b><br>
+                            <span>Region:</span> <b>Kanto</b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b>Brock & Misty</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Micah Harrison</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>October 3rd, 2021</b><br>
+                            <span>Region:</span> <b>Kanto</b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b>Brock & Misty</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Alyse Harrison</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Ariel Sketchit</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Shiera Starlight</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Lucia Di Vitis</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Aurelio Di Vitis</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Rosetta Stone</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Hephaestus Stone</h2>
+                            </center><br>by
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Aphrodite Stone</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Mason Stone</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Javen Riley Sloan</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+-->
+            <a href="/Isaac">
+                <div class="grid-item mini male sinnoh">
+                    <figure><img
+                            src="https://64.media.tumblr.com/2d7a8d8d119cac069a6c29b28d35d246/c04684caeeb9315e-fd/s500x750/8b6d739ff618f2133414ec8fa2f27d5931a5beff.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Isaac Luna</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>February 14th, 2018</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b>Heir</b><br>
+                            <span>Parents:</span> <b>Conway, Dawn & Kenny</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Davina">
+                <div class="grid-item all female sinnoh mini">
+                    <figure><img
+                            src="https://64.media.tumblr.com/55a7c463ec40a958714b49f571611422/c04684caeeb9315e-0d/s500x750/397f1e69f638420f3ba1db1547914ceb2df5259b.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Davina Luna</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>August 29th, 2019</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b>Coordinator, <s>Princess</s></b><br>
+                            <span>Parents:</span> <b>Kenny, Dawn & Conway</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Loren Luna</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+-->
+            <a href="/Spinner">
+                <div class="grid-item  male sinnoh comp">
+                    <figure><img
+                            src="https://64.media.tumblr.com/f22061224c2aa020f60cba7b8d791060/c04684caeeb9315e-a0/s500x750/b99c21c3fe7c321226650badd61a2e99a9cccb96.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Elián D'Amore</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>May 21st, 2018</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b>Coordinator</b><br>
+                            <span>Parents:</span> <b>Sonny & Candice</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Jet">
+                <div class="grid-item male sinnoh comp">
+                    <figure><img
+                            src="https://64.media.tumblr.com/d09b13f75182dca6007ea1c7205680d5/c04684caeeb9315e-33/s400x600/85917f2a99f668aad253e8464989dca87a202d56.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Jettison Bennett</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>July 28th, 2018</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b>Coordinator</b><br>
+                            <span>Parents:</span> <b>Barry & Ursula</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Ian Bennett</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Kaarin Bennett</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        --> <a href="/Juliet">
+                <div class="grid-item all female sinnoh mini ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Juliet Bennett</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>December 21st, 2030</b><br>
+                            <span>Region:</span> <b>Sinnoh</b><br>
+                            <span>Class:</span> <b>Dreamer</b><br>
+                            <span>Parents:</span> <b>Barry & Ursula</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!--        <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Harper Miranys</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Adonis Miranys</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+-->
+            <a href="/gia">
+                <div class="grid-item all female unova">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Sage Miranys</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>August 17th, 2030 </b><br>
+                            <span>Region:</span> <b>Unova</b><br>
+                            <span>Class:</span> <b>Unknown</b><br>
+                            <span>Parents:</span> <b>Benga & Iris</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="/ridley">
+                <div class="grid-item all male unova">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Ridley Miranys</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>August 17th, 2030 </b><br>
+                            <span>Region:</span> <b>Unova</b><br>
+                            <span>Class:</span> <b>Unknown</b><br>
+                            <span>Parents:</span> <b>Benga & Iris</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Jeremy">
+                <div class="grid-item all male mini unova">
+                    <figure><img
+                            src="https://64.media.tumblr.com/6e1fa93463ed8b14cf84613ca2998bb7/828bc9cb46d82089-75/s540x810/4d5ca436a9991ec9c3f3172a98e989545a2e255d.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Jeremiah Griffith</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>July 19th, 2018</b><br>
+                            <span>Region:</span> <b>Unova</b><br>
+                            <span>Class:</span> <b>Punk</b><br>
+                            <span>Parents:</span> <b>Chili & <s>Georgia</s></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/annabelle">
+                <div class="grid-item female unova comp">
+                    <figure><img
+                            src="https://64.media.tumblr.com/e5b170abd12eed765ef3384a1c816cce/c04684caeeb9315e-bc/s540x810/ef9700648261be3b1e0318c563c0ab8ebde76c65.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Annabelle Griffith</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>October 1st, 2019</b><br>
+                            <span>Region:</span> <b>Unova</b><br>
+                            <span>Class:</span> <b>Student</b><br>
+                            <span>Parents:</span> <b>Chili, <s>Georgia & Trip</s></b><br>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/isabella">
+                <div class="grid-item female unova comp">
+                    <figure><img
+                            src="https://64.media.tumblr.com/6f13fe18c642bb5edcaa3c958ad238af/c04684caeeb9315e-6e/s500x750/913bd1ea63a940321fbaeac38007428648dafb5f.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Isabella Griffith</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>December 17th, 2020</b><br>
+                            <span>Region:</span> <b>Unova</b><br>
+                            <span>Class:</span> <b>Figure Skater</b><br>
+                            <span>Parents:</span> <b>Chili, <s>Georgia & Shamus</s></b><br>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Iwan Herrscher</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Iuile Herrscher</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Ksawery Fontaine</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+-->
+            <a href="/sterling">
+                <div class="grid-item female unova comp">
+                    <figure><img
+                            src="https://64.media.tumblr.com/1761aa8052448fc0fb18f71368f9defb/c04684caeeb9315e-a9/s500x750/082a967a27d8d5b5939344ec595b0ceff8206f9b.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Sterling Fontaine</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>October 30th, 2020</b><br>
+                            <span>Region:</span> <b>Unova</b><br>
+                            <span>Class:</span> <b>Student</b><br>
+                            <span>Parents:</span> <b>Trip & Burgundy</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="/louis">
+                <div class="grid-item all male kalos mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Louis Hikialani</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>2018</b><br>
+                            <span>Region:</span> <b>Kalos</b><br>
+                            <span>Class:</span> <b>Dancer</b><br>
+                            <span>Parents:</span> <b>Ilima & Shauna</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Claudia">
+                <div class="grid-item all female kalos mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Claudia Griffith</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>January 31st, 2020</b><br>
+                            <span>Region:</span> <b>Kalos</b><br>
+                            <span>Class:</span> <b>Performer</b><br>
+                            <span>Parents:</span> <b>Cilan & Aria</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+
+            <!--
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Helene Vanchure</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>-->
+
+            <a href="/Adrian">
+                <div class="grid-item all female kalos mini ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Adrian Vanchure</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>July 16th, 2024</b><br>
+                            <span>Region:</span> <b>Kalos</b><br>
+                            <span>Class:</span> <b>Perfomer</b><br>
+                            <span>Parents:</span> <b>Tierno & Serena</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Dulce">
+                <div class="grid-item all female kalos mini">
+                    <figure><img
+                            src="https://64.media.tumblr.com/218f161d98347e372a8287f2b416cbe2/9844d37cdfad0d6a-95/s500x750/dfe3348dc58917221ad491a76a913ecb2191e8bd.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Dulce Hayden</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>November 26th, 2021</b><br>
+                            <span>Region:</span> <b>Kalos</b><br>
+                            <span>Class:</span> <b>Performer</b><br>
+                            <span>Parents:</span> <b>Andrew & Nini</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Merri Hayden</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Calis Hayden</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Amelie Rocha</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Lilith De Montoya</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Seraph De Montoya</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Maile Kāne</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Journey Ambrose</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Ventura Ambrose</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+-->
+            <a href="/Sabbath">
+                <div class="grid-item all male galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Sabbath L. Sheppard</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>September 9th, 2019</b><br>
+                            <span>Region:</span> <b>Galar</b><br>
+                            <span>Class:</span> <b>Student</b><br>
+                            <span>Parents:</span> <b>Piers & Roxie</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Zeppelin">
+                <div class="grid-item all female galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Zeppelin L. Sheppard</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>July 17th, 2021</b><br>
+                            <span>Region:</span> <b>Galar</b><br>
+                            <span>Class:</span> <b>Student</b><br>
+                            <span>Parents:</span> <b>Piers & Roxie</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Nirvana">
+                <div class="grid-item all mini nonbinary galar">
+                    <figure><img
+                            src="https://64.media.tumblr.com/8ac9595e0af787ad69e872bd63c828a3/9844d37cdfad0d6a-8b/s540x810/afbe1f2467a14268b8acc8d0e8ec182a8f0b2930.jpg">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Nirvana L. Sheppard</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>March 29th, 2025</b><br>
+                            <span>Region:</span> <b>Galar</b><br>
+                            <span>Class:</span> <b>Unknown</b><br>
+                            <span>Parents:</span> <b>Piers & Roxie</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Ramzi">
+                <div class="grid-item all male galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Ramzi Shahryar</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>November 11th, 2019</b><br>
+                            <span>Region:</span> <b>Galar</b><br>
+                            <span>Class:</span> <b>Trainer</b><br>
+                            <span>Parents:</span> <b>Leon & Raihan</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/roise">
+                <div class="grid-item all female mini galar">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Roise Shahryar</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>November 11th, 2019</b><br>
+                            <span>Region:</span> <b>Galar</b><br>
+                            <span>Class:</span> <b>Gondola Receptionist</b><br>
+                            <span>Parents:</span> <b>Leon & Raihan</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Daario Masoud</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Olyvar Masoud</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Freyja Masoud</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Thorne Hightower</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Nettles Hightower</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Vendetta Addams</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b>Caitlin & Grimsley</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Lupin</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Moriarty Stone</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+-->
+            <a href="/Sheridan">
+                <div class="grid-item female mini all kalos">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Sheridan Reznikova</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b>Kalos</b><br>
+                            <span>Class:</span> <b>???</b><br>
+                            <span>Parents:</span> <b>Looker & Anabel</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Delilah</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Ciarán</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Mariee</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Inge</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Mikken</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Atom</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Juniper</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Nissa</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Theon</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Sigorn</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Scorpius</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Tauren</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/">
+                <div class="grid-item ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Opal</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b></b><br>
+                            <span>Region:</span> <b></b><br>
+                            <span>Class:</span> <b></b><br>
+                            <span>Parents:</span> <b></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+-->
+
+        </div>
+    </main>
+
+
+    <!-------------------------- END MAIN CONTENT --------------------------
+
+
+<a href="/">
+    <div class="grid-item ">
+    <figure><img src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek"></figure>
+    <div class="content">
+    <div class="name">
+    <center><h2></h2></center><br>
+    <span>D.O.B:</span> <b></b><br>
+    <span>Region:</span> <b></b><br>
+    <span>Class:</span> <b></b><br>
+    <span>Parents:</span> <b></b>
+    </div>
+    </div>
+    </div>
+    </a>
+    
+    <a href="/">
+    <div class="grid-item ">
+    <figure><img src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek"></figure>
+    <div class="content">
+    <div class="name">
+    <center><h2></h2></center><br>
+    <span>D.O.B:</span> <b></b><br>
+    <span>Region:</span> <b></b><br>
+    <span>Class:</span> <b></b><br>
+    <span>Parents:</span> <b></b>
+    </div>
+    </div>
+    </div>
+    </a>
+    
+    <a href="/">
+    <div class="grid-item ">
+    <figure><img src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek"></figure>
+    <div class="content">
+    <div class="name">
+    <center><h2></h2></center><br>
+    <span>D.O.B:</span> <b></b><br>
+    <span>Region:</span> <b></b><br>
+    <span>Class:</span> <b></b><br>
+    <span>Parents:</span> <b></b>
+    </div>
+    </div>
+    </div>
+    </a>
+    
+
+    <a href="/">
+    <div class="grid-item ">
+    <figure><img src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek"></figure>
+    <div class="content">
+    <div class="name">
+    <center><h2></h2></center><br>
+    <span>D.O.B:</span> <b></b><br>
+    <span>Region:</span> <b></b><br>
+    <span>Class:</span> <b></b><br>
+    <span>Parents:</span> <b></b>
+    </div>
+    </div>
+    </div>
+    </a>
+
+do me a favor and don't delete my credit. 
+its small and unobtrustive for a reason 
+--->
+
+    <a href="http://www.ikilledtherpc.tumblr.com">
+        <div id="credit">ikilledtherpc.</div>
+    </a>
+</body>
+
+<!---script! don't touch=-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var s = skrollr.init();
+</script>
+
+</html>

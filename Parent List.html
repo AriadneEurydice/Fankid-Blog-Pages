@@ -1,0 +1,616 @@
+<!doctype html>
+
+<!--theme by raven at ikilledtherpc don't be a dick --->
+
+<html>
+
+<head>
+
+    <title>Parents</title>
+
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />{/block:Description}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital@0;1&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <!--fontawesome-->
+    <link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- filter scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="//unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // init Isotope
+            var $grid = $('.grid').isotope({
+                itemSelector: '.grid-item',
+                masonry: {
+                    columnWidth: 250,
+                    fitWidth: true,
+                    gutter: 3
+                },
+                hiddenStyle: {
+                    opacity: 0
+                },
+                visibleStyle: {
+                    opacity: 1
+                },
+                transitionDuration: '0.5s'
+            });
+            // layout Isotope after each image loads
+            $grid.imagesLoaded().progress(function () {
+                $grid.isotope('layout');
+            });
+            // store filter for each group
+            var filters = {};
+            $('.filters').on('click', '.button', function () {
+                var $this = $(this);
+                // get group key
+                var $buttonGroup = $this.parents('.button-group');
+                var filterGroup = $buttonGroup.attr('data-filter-group');
+                // set filter for group
+                filters[filterGroup] = $this.attr('data-filter');
+                // combine filters
+                var filterValue = concatValues(filters);
+                // set filter for Isotope
+                $grid.isotope({
+                    filter: filterValue
+                });
+            });
+            // change is-checked class on buttons
+            $('.button-group').each(function (i, buttonGroup) {
+                var $buttonGroup = $(buttonGroup);
+                $buttonGroup.on('click', 'button', function () {
+                    $buttonGroup.find('.is-checked').removeClass('is-checked');
+                    $(this).addClass('is-checked');
+                });
+            });
+        });
+        // flatten object by concatting values
+        function concatValues(obj) {
+            var value = '';
+            for (var prop in obj) {
+                value += obj[prop];
+            }
+            return value;
+        }
+    </script>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+<link rel="stylesheet" href="https://dl.dropbox.com/scl/fi/xrk7fgq72ovmtsfnsuga5/Hosting-Profile-Page.css?rlkey=e2xyiuvudj31b4jgb47exgb8c&dl=0">
+
+    <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img
+            src="https://c.statcounter.com/12549123/0/c1f866bd/1/" alt="Web Analytics Made Easy - Statcounter"
+            referrerPolicy="no-referrer-when-downgrade"></a>
+
+</head>
+
+<body>
+
+    <!-----------------------------HEADER----------------------------->
+
+    <header>
+        <h1>PARENTS</h1>
+        <div class="desc">
+            You'll find all of the profiles for the parents here on this page. You can use the tags to filter through
+            the profiles! All of the photos link to the full profile! If you have any questions, you can send me an ask!
+            <br><br><button class="back" onclick="goBack()"><i aria-hidden="true"
+                    class="fa fa-chevron-left"></i>&nbsp;Go Back.</button>
+        </div>
+    </header>
+
+    <!-----------------------------SIDEBAR----------------------------->
+
+    <nav data-0="padding-top:300px;overflow:hidden;" data-250="padding-top:70px; overflow:auto;">
+        <div class="filters">
+
+            <!-- category one --->
+            <!--    DROPDOWN LIST BEGINS -->
+            <div class="button-group" data-filter-group="gender">
+                <h3>TYPE</h3>
+                <button class="button is-checked" data-filter="">all</button>
+                <button class="button" data-filter=".mini">Mini</button>
+                <button class="button" data-filter=".comp">Complete</button>
+
+            </div>
+            <!--    DROPDOWN LIST ENDS   -->
+            <!--    DROPDOWN LIST BEGINS -->
+            <div class="button-group" data-filter-group="gender">
+                <h3>GENDER</h3>
+                <button class="button is-checked" data-filter="">all</button>
+                <button class="button" data-filter=".female">Female</button>
+                <button class="button" data-filter=".male">Male</button>
+                <button class="button" data-filter=".nonbinary">Non-Binary</button>
+            </div>
+            <!--    DROPDOWN LIST ENDS   -->
+            <!--    DROPDOWN LIST BEGINS -->
+            <div class="button-group" data-filter-group="region">
+                <h3>REGION</h3>
+                <button class="button is-checked" data-filter="">all</button>
+                <button class="button" data-filter=".kanto">Kanto</button>
+                <button class="button" data-filter=".johto">Johto</button>
+                <button class="button" data-filter=".hoenn">Hoenn</button>
+                <button class="button" data-filter=".sinnoh">Sinnoh</button>
+                <button class="button" data-filter=".unova">Unova</button>
+                <button class="button" data-filter=".kalos">Kalos</button>
+                <button class="button" data-filter=".alola">Alola</button>
+                <button class="button" data-filter=".galar">Galar</button>
+            </div>
+            <!--    DROPDOWN LIST ENDS -->
+
+
+        </div>
+    </nav>
+
+    <!---------------------------MAIN CONTENT--------------------------->
+
+    <main>
+        <div class="grid">
+
+            <a href="/Ash">
+                <div class="grid-item male galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Ashton Weiss</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>May 22nd, 1997</b><br>
+                            <span>Residence:</span> <b>Wyndon, Galar</b><br>
+                            <span>Occupation:</span> <b>Fashion Designer</b><br>
+                            <span>Partners:</span> <b>Paul & May</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="/paul">
+                <div class="grid-item male galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Paulus Weiss Sr.</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>December 22nd, 1995</b><br>
+                            <span>Residence:</span> <b>Wyndon, Galar</b><br>
+                            <span>Occupation:</span> <b>Musician</b><br>
+                            <span>Partners:</span> <b>Ash & May</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="/May">
+                <div class="grid-item female galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>May Weiss</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>March 3rd, 1999</b><br>
+                            <span>Residence:</span> <b>Wyndon, Galar</b><br>
+                            <span>Occupation:</span> <b>Pokémon Chef</b><br>
+                            <span>Partners:</span> <b>Ash & Paul</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Sonny">
+                <div class="grid-item male sinnoh mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Salvatore D'Amore</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>September 1st, 1999</b><br>
+                            <span>Residence:</span> <b>Snowpoint City, Sinnoh</b><br>
+                            <span>Occupation:</span> <b>Survival Instructor</b><br>
+                            <span>Partner:</span> <b>Candice</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Candice">
+                <div class="grid-item female sinnnoh mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Candice Alcala</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>July 3rd, 1996</b><br>
+                            <span>Residence:</span> <b>Snowpoint City, Sinnoh</b><br>
+                            <span>Occupation:</span> <b>Elite Four Member</b><br>
+                            <span>Partner:</span> <b>Sonny</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/piers">
+                <div class="grid-item male galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Piers Burdon-Sheppard</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>October 31st, 1991</b><br>
+                            <span>Residence:</span> <b>Wyndon, Galar</b><br>
+                            <span>Occupation:</span> <b>Musician</b><br>
+                            <span>Partner:</span> <b>Roxie</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/roxanna">
+                <div class="grid-item female galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Roxanna Love</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>June 14th, 1993</b><br>
+                            <span>Residence:</span> <b>Wyndon, Galar</b><br>
+                            <span>Occupation:</span> <b>Musician</b><br>
+                            <span>Partner:</span> <b>Piers</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/barry">
+                <div class="grid-item male sinnoh mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Barristan Bennett</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>October 23rd, 1998</b><br>
+                            <span>Residence:</span> <b>Alamos Town, Sinnoh</b><br>
+                            <span>Occupation:</span> <b>Frontier Brain</b><br>
+                            <span>Partner:</span> <b>Ritchie, <s>Ursula</s></b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/ursula">
+                <div class="grid-item female sinnoh mini ">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Ursula Bennett</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>January 18th, 1999</b><br>
+                            <span>Residence:</span> <b>Alamos Town, Sinnoh</b><br>
+                            <span>Occupation:</span> <b>Actress</b><br>
+                            <span>Partner:</span> <b>Barry</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/conway">
+                <div class="grid-item male sinnoh mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Conway Luna</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>August 14th, 1999</b><br>
+                            <span>Residence:</span> <b>Lily of the Valley, Sinnoh</b><br>
+                            <span>Occupation:</span> <b>Elite Four Member</b><br>
+                            <span>Partner:</span> <b>Dawn</b> | <span>Paramour:</span> <b>Kenny</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/dawn">
+                <div class="grid-item female sinnoh mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Dawn Luna</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>October 1st, 1999</b><br>
+                            <span>Residence:</span> <b>Lily of the Valley, Sinnoh</b><br>
+                            <span>Occupation:</span> <b>Queen</b><br>
+                            <span>Consorts:</span> <b>Conway & Kenny</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/kenny">
+                <div class="grid-item male sinnoh mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Kenneth Barnes</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>April 30th, 1998</b><br>
+                            <span>Residence:</span> <b>Lily of the Valley, Sinnoh</b><br>
+                            <span>Occupation:</span> <b>Kindergarten Teacher</b><br>
+                            <span>Paramours:</span> <b>Dawn & Conway</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Raihan">
+                <div class="grid-item all male galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Raihan Shahryar</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>January 24th, 1990</b><br>
+                            <span>Residence:</span> <b>Postwick, Galar</b><br>
+                            <span>Occupation:</span> <b>Macro Cosmos President</b><br>
+                            <span>Partner:</span> <b>Leon</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/leon">
+                <div class="grid-item all male galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Tarak Shahryar</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>January 1st, 1990</b><br>
+                            <span>Residence:</span> <b>Postwick, Galar</b><br>
+                            <span>Occupation:</span> <b>Farmer</b><br>
+                            <span>Partner:</span> <b>Raihan</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Hop">
+                <div class="grid-item all male galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Hizdahr Masoud</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>October 8th, 1997</b><br>
+                            <span>Residence:</span> <b>Wedgehurst, Galar</b><br>
+                            <span>Occupation:</span> <b>Historian</b><br>
+                            <span>Partner:</span> <b>Sonia</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/sonia">
+                <div class="grid-item all female galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Sonja Lauré Garrett</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>September 25th, 1990</b><br>
+                            <span>Residence:</span> <b>Wedgehurst, Galar</b><br>
+                            <span>Occupation:</span> <b>Pokémon Professor</b><br>
+                            <span>Partner:</span> <b>Hop</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Grimsley">
+                <div class="grid-item male unova galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Grimsley Addams</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>1978</b><br>
+                            <span>Residence:</span> <b>Wyndon, Galar</b><br>
+                            <span>Occupation:</span> <b>??</b><br>
+                            <span>Partners:</span> <b>Caitlin</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Caitlin">
+                <div class="grid-item female unova galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Caitlin Addams</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>1984</b><br>
+                            <span>Residence:</span> <b>Undella Town, Unova</b><br>
+                            <span>Occupation:</span> <b>Elite Four</b><br>
+                            <span>Partners:</span> <b>Grimsley</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Chili">
+                <div class="grid-item male unova mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Chili Griffith</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>August 24th, 1995</b><br>
+                            <span>Residence:</span> <b>Castelia City, Unova</b><br>
+                            <span>Occupation:</span> <b>Chef</b><br>
+                            <span>Partners:</span> <b>None</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Victor">
+                <div class="grid-item male galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Victor Guerrero</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>December 1st, 1998</b><br>
+                            <span>Residence:</span> <b>Isle Of Armor, Galar</b><br>
+                            <span>Occupation:</span> <b>Dojo Master</b><br>
+                            <span>Partners:</span> <b>??</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Bede">
+                <div class="grid-item male galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Bede Westford</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>1996</b><br>
+                            <span>Residence:</span> <b>Ballonlea, Galar</b><br>
+                            <span>Occupation:</span> <b>Gym Leader</b><br>
+                            <span>Partners:</span> <b>Gloria</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Gloria">
+                <div class="grid-item female galar mini">
+                    <figure><img
+                            src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek">
+                    </figure>
+                    <div class="content">
+                        <div class="name">
+                            <center>
+                                <h2>Gloria Westford</h2>
+                            </center><br>
+                            <span>D.O.B:</span> <b>December 1st, 1998</b><br>
+                            <span>Residence:</span> <b>Ballonlea, Galar</b><br>
+                            <span>Occupation:</span> <b>??</b><br>
+                            <span>Partners:</span> <b>Bede</b>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <!--<a href="/">
+    <div class="grid-item ">
+    <figure><img src="https://dl.dropbox.com/scl/fi/zizzty76htxcodjeo4n33/Pokeball.webp?rlkey=vmatvupe0cmymq3wg6ygmbiek"></figure>
+    <div class="content">
+    <div class="name">
+    <center><h2></h2></center><br>
+    <span>D.O.B:</span> <b></b><br>
+    <span>Residence:</span> <b></b><br>
+    <span>Occupation:</span> <b></b><br>
+    <span>Partners:</span> <b></b>
+    </div>
+    </div>
+    </div>
+    </a>-->
+    <!-------------------------- END MAIN CONTENT --------------------------
+
+do me a favor and don't delete my credit. 
+its small and unobtrustive for a reason 
+--->
+
+    <a href="http://www.ikilledtherpc.tumblr.com">
+        <div id="credit">ikilledtherpc.</div>
+    </a>
+</body>
+
+<!---script! don't touch=-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var s = skrollr.init();
+</script>
+
+</html>

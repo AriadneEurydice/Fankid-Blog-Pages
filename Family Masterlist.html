@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+
+
+<!-- PAGE THEME #6: CAUTERIZE by @nonspace.
+ Don't steal.
+ Don't claim as your own.
+ Don't use as base code.
+ Editing for personal use is fine!
+ Updated 00/00/0000 -->
+
+
+<head>
+
+
+  <title>Family Masterlist</title>
+  <link rel="icon" type="image/png"
+    href="https://64.media.tumblr.com/5797de73fd3f2c3479b9769c48846805/9844d37cdfad0d6a-92/s1280x1920/529b7a6e8338ef88fd1563f9ad2e62722476592e.jpg">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+
+
+
+
+  <!--FONT AWESOME ICONS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+  <!--JQUERY-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+  <!--JQUERY UI TOOLTIPS-->
+  <script src="https://static.tumblr.com/vuxbcsk/6FTp5y7g3/jquery-ui.min.js"></script>
+  <script>
+    var dd = 2;  // how many images you have to change
+    var cnt = 0;
+    function chng() {
+
+
+      var rotator = document.getElementById('rr');  // change to match image ID
+      var imageDir = '0';                          // change to match images folder
+
+
+
+
+      var images = [
+        ''];
+
+
+      cnt++;
+
+
+      var len = images.length;
+      if (cnt < dd) {
+        rr.src = images[cnt];
+      }
+      else if (cnt == len) {
+        rr.src = images[0];
+        cnt = 0;
+      }
+    }
+
+
+  </script>
+
+
+  <script type="text/javascript">
+    // Wait for document to load
+    document.addEventListener("DOMContentLoaded", function (event) {
+      document.documentElement.setAttribute("data-theme", "light");
+
+
+      // Get our button switcher
+      var themeSwitcher = document.getElementById("theme-switcher");
+
+
+      // When our button gets clicked
+      themeSwitcher.onclick = function () {
+        // Get the current selected theme, on the first run
+        // it should be `light`
+        var currentTheme = document.documentElement.getAttribute("data-theme");
+
+
+        // Switch between `dark` and `light`
+        var switchToTheme = currentTheme === "dark" ? "light" : "dark"
+
+
+        // Set our currenet theme to the new one
+        document.documentElement.setAttribute("data-theme", switchToTheme);
+      }
+    });
+  </script>
+
+
+
+
+  <style>
+    /*SET COLORS*/
+    :root {
+      --g1: #563285;
+      --g12: #862653;
+
+      --background: #d1d1d1;
+      --bullet: #d14467;
+      --text: #000;
+      --border: #eee;
+      --box: #fff;
+      --credit-and-nav: #ffffff;
+      --color: #b10848;
+      /*bold + italics*/
+      --cards: #ffffff;
+      /*navigation cards*/
+    }
+
+
+
+
+    [data-theme="dark"] {
+      --background: #000;
+      --text: #fff;
+      --box: #000;
+      --border: #161616;
+      --credit-and-nav: #000;
+
+
+      animation: lazyload 0.5s;
+    }
+
+
+    a:link,
+    a:active,
+    a:visited {
+      text-decoration: none;
+      color: var(--g1);
+      /* IMPORTANT. CAN BE CHANGED TO A HEX CODE*/
+    }
+
+    h2 {
+      font-family: 'Inter Tight';
+      font-size: 35px;
+      line-height: 120%;
+    }
+
+
+    h3,
+    event h3 {
+      font-family: 'Inter Tight';
+      font-size: 21.5px;
+    }
+
+
+    .cell2 img {
+      padding-right: 95px;
+    }
+
+
+    body {
+      background: var(--background);
+      /* ACTUAL BACKGROUND FOR PAGE */
+      background-attachment: repeat;
+      background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png');
+    }
+
+    #outer {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: var(--background);
+      /* ACTUAL BACKGROUND FOR PAGE */
+      background-attachment: repeat;
+      background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png');
+    }
+
+
+    /*IMAGE*/
+    .cimg {
+      margin-top: 200px;
+      /*MOVE COLORED BOX UP AND DOWN, A BIGGER # MEANS FURTHER UP PAGE, SMALLER IS FURTHER DOWN PAGE*/
+      margin-left: -290px;
+      /*MOVE COLORED BOX SIDE TO SIDE*/
+      padding: 0px;
+      height: 200px;
+      /*CHANGE BOX HEIGHT*/
+      width: 256px;
+      /*CHANGE BOX WIDTH*/
+    }
+
+
+    .cimg img {
+      margin-left: -20px;
+      /*MOVE CHARACTER SIDE TO SIDE*/
+      margin-top: -240px;
+      /*MOVE CHARACTER UP AND DOWN, A BIGGER # MEANS FURTHER UP PAGE, SMALLER IS FURTHER DOWN PAGE*/
+      height: 630px;
+    }
+  </style>
+
+
+  <link rel="stylesheet"
+    href="https://dl.dropbox.com/scl/fi/5yijjrg2qc27zap5alnns/Hosting-Families.css?rlkey=zm3hafask5y1v6kg0f8k6ktqi&dl=0">
+
+</head>
+
+
+<body>
+  <div id="outer">
+    <div id="container">
+
+
+      <div id="credit">
+        <div class="switch"><input type="button" button class="button" value="CHANGE ART" onclick="chng()" /></div>
+
+
+        <div class="switch" , id="theme-switcher"><a><i class="fa fa-moon-o" style="font-size: 14px;" aria-hidden="true"
+              title="light/dark mood"></i></a></button></div>
+        <a href="/"><i class="fa fa-home" style="font-size: 14px;" aria-hidden="true" title="home"></i></a>
+        <a href="/faqs">
+          <i class="fa fa-user" aria-hidden="true" title="faqs"></i></a>
+        <a href="/ask">
+          <i class="fa fa-envelope" aria-hidden="true" title="message"></i></a>
+        <!--CREDIT, DON'T CHANGE!!!)-->
+        <a href="https://nonspace.tumblr.com">
+          <i class="fa fa-copyright" aria-hidden="true"></i> NNSPC</a>
+      </div>
+      <!--HEADER-->
+      <header>
+        <!--CHARACTER LINKS-->
+        <nav id="cnav">
+          <div class="cl active" href="#one">KANTO</div>
+          <div class="cl" href="#two">JOHTO</div>
+          <div class="cl" href="#three">HOENN</div>
+          <div class="cl" href="#four">SINNOH</div>
+          <div class="cl" href="#five">UNOVA</div>
+          <div class="cl" href="#six">KALOS</div>
+          <div class="cl" href="#seven">ALOLA</div>
+          <div class="cl" href="#eight">GALAR</div>
+          <div class="cl" href="#nine">PALDEA</div>
+        </nav>
+      </header>
+
+
+      <!--CHARACTER CARDS-->
+      <section id="wrapper">
+
+        <!--Timeline-->
+        <div class="ccard g1 active" id="one">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>KANTO</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--TIMELINE-->
+          <div class="timeline">
+            <center>
+
+            </center> <br>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Horacio Ambrose & Gohan Márquez</h3>
+                <h4><i>Married, 2021</i></h4>
+                <li>Journey Ambrose (2023)</li>
+                <li>Ventura Ambrose (2026)</li>
+                <br>
+                <center><b>When Gou and Ash parted ways after Project Mew, Gou decided he wanted to see the rest of the world. He was only a few weeks into traveling alone when he and Horace crossed paths again while Horace was on a errand for Professor Oak. The two traveled together for a short period of time before Gou once again decided that he needed to learn to be self-reliant because he felt selfish for steering Horace away from his own goal. The two promised to keep in touch, and eventually began dating long distance.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Brock Harrison & Anne Joy Harrison</h3>
+                <h4><i>Married, 2024</i></h4>
+                <li>Summer Harrison (2016) <b>[With Misty, Brock has sole custody.]</b></li>
+                <li>Damon Harrison (2021) <b>[With Misty, Brock has sole custody.]</b></li>
+                <li>Micah Harrison (2021) <b>[With Misty, Brock has sole custody.]</b></li>
+                <li>Alyse Joy Harrison (2027)</li>
+                <br>
+                <center><b>Previously married to Misty Ward, Brock had dedicated his life to her and their children
+                    together. Sometime after Summer had been born Misty developed post-partum depression and began an
+                    affair with her ex-boyfriend, Tracey Sketchit. After Misty filed for divorce and left Brock, taking
+                    their newborn twins Micah and Damon, Brock fought her for custody. Some years later, Brock's
+                    co-worker Dr. Anne Joy confessed her feelings for him. Brock and Anne's relationship moved very fast
+                    from the start after Brock's kids met her.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Tracey Sketchit</h3>
+                <h4><i>Divorced, 2021-2032</i></h4>
+                <li>Ariel Sketchit (2024) <b>[With Misty, Misty has sole custody.]</b></li> <br>
+                <center><b>Step-father, after his divorce from Misty Ward (Starlight),<br> Tracey is not considered
+                    family and has no contact with them.</b></center> <br>
+                <li>Summer Harrison (2016)</li>
+                <li>Damon Harrison (2021)</li>
+                <li>Micah Harrison (2021)</li>
+                <br>
+                <center><b>Despite his.. shameful relationship with Misty, he really did love her despite their ups anddowns. Tracey also really loved her children, back when he had been "just a friend" or "Uncle
+                    Tracey", he made sure that he was always available for Summer, Damon and Micah if and when they ever
+                    needed him. He sent birthday gifts and holiday money and it pains him to know that Summer is the
+                    only one of the children who actually saw him as a father. Now that Summer is gone, he rarely sees
+                    any of the children, especially Ariel.</b></center>
+              </div>
+            </div>
+
+          </div> <!--ccard-->
+
+          <div class="cimg"> <img
+              src="https://dl.dropbox.com/scl/fi/dh8r6hrpqgkjjywjpytzt/Kanto-Poster.png?rlkey=cdz7cjav0hlfyk8qgwgqact0t"
+              id="rr"> </div>
+        </div> <!--ccard-->
+
+        <!--Timeline-->
+        <div class="ccard g2" id="two">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>JOHTO</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--TIMELINE-->
+          <div class="timeline">
+            <center>
+
+            </center> <br>
+
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Barristan Bennett & Richard Bennett, né Barnes</h3>
+                <h4><i>Married, 2018</i></h4>
+                <li>Ian Bennett (2018)</li>
+                <li>Kaarin Bennett (2022)</li>
+                <br>
+                <center><b>Barry and Ritchie met while Barry and Ursula were traveling together for Barry's Frontier
+                    Run. The two had a great chemistry, and really liked each other. Barry had assured Ritchie that
+                    Ursula was only a friend, and before they knew it, Ritchie was pregnant. Barry had to leave Johto
+                    unexpectedly with Ursula but promised Ritchie he'd return before Ian was born. When Barry did
+                    finally come back to Johto, he insisted they get married as quickly as possible. Later, when Ritchie
+                    finds out Barry lied, he decides to forgive and use Barry's other three children as a bridge into a
+                    good relationship with Ursula. Whether it'll work or not..?</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Silver Di Vitis & Chloe Di Vitis, née Cerise</h3>
+                <h4><i>Married, 2018</i></h4>
+                <li>Sicario Di Vitis (2019)</li>
+                <li>Lucia Di Vitis (2020) <b>[Arlo/Lucy, Adopted in 2021]</b></li>
+                <li>Aurelio Di Vitis (2023)</li>
+                <br>
+                <center><b>Silver and Chloe met while studying underneath Dr. Cara Stone, the two realized quickly that despite her meaning well, she didn't exactly know her own material. They began a study group with other classmates that eventually dwindled down to both of them. They began dating later into the semester, with Silver proposing a few weeks before graduation. </b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Anabel Hart</h3>
+                <li></li>
+                <li></li>
+                <li></li>
+                <br>
+                <center><b>TBD.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Khoury Hudson & Lyra Hudson, née Gilbert</h3>
+                <h4><i>Married, 2017</i></h4>
+                <li>Ryan Hudson (2019)</li>
+                <br>
+                <center><b>Khoury and Lyra are childhood best friends. When they returned to Johto from Sinnoh, she and Khoury had a falling out after he didn't return her feelings due to being afraid of their friendship changing. The two parted ways and went on their respective journeys. After Lyra broke up with her long-time boyfriend Silver, she and Khoury reunited in New Bark Town. Initally their friendship was.. tense.. but quickly began to ignite into something more.</b></center>
+              </div>
+            </div>
+
+          </div> <!--ccard-->
+          <div class="cimg"> <img
+              src="https://dl.dropbox.com/scl/fi/zawmrzz4nzrzgxtijx2w2/Johto-Poster.png?rlkey=bnm6lofa5f0kmvk7bxpqb4nyw"
+              id="rr"> </div>
+        </div> <!--ccard-->
+
+        <!--Timeline-->
+        <div class="ccard g3" id="three">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>HOENN</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--TIMELINE-->
+          <div class="timeline">
+            <center>
+
+            </center> <br>
+
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Solidad LaMarche</h3>
+                <li>Jaime Bennett (2021) <b>[Barry/Ursula, Solidad is warding Jaime.]</b></li>
+                <br>
+                <center><b>Solidad separated herself from her family when she moved to Hoenn, only fifteen and already tired of the oppressive atmosphere of being the Heiress to Alamos Town. Due to Solidad abdicating her Baroness duties, her position moved to her younger sister Ursula. Despite this, Solidad still loves and has a fondness for her younger sister and when asked, took Jaime to ward sometime after his fifth birthday, as is standard for families of their status.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>James Radcliffe II & Jessica Radcliffe, née Steele + Meowth</h3>
+                <h4><i>Married, 2020</i></h4>
+                <li>Unnamed Son (2022)</li>
+                <li>Unnamed Son (2026)</li>
+                <br>
+                <center><b>Jessie and James made their way back to Hoenn so James could pursue his love of caring for Pokemon by turning his grandparent's home into a Pokemon Nursery. Meanwhile Jessie went back to school in order to become a nurse. While both tried to date other people, they realized they were happier together than they were apart.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Harley Sloan & Juan Gracia-Molina</h3>
+                <h4><i>Married, 2012</i></h4>
+                <li>Javen Riley Sloan (2009)</li>
+                <br>
+                <center><b>After the disaster that was Harley's previous relationship which ended in Harley fighting for custody of his son Javen Riley, from his father Adam Riley, Harley decided that he was done with relationships.. Until he met Juan while staying in Sootopolis. Harley was immediately smitten with Juan. Juan however, made sure to let Harley know that he was too old to play games, and that if Harley wanted to be with him, then he'd need to be serious.. </b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Steven Stone & Cara Stone, née Liss</h3>
+                <h4><i>Married, 2016</i></h4>
+                <li>Rosetta Stone (2017)</li>
+                <li>Mason Stone (2021)</li>
+                <br>
+                <center><b>The two met while Steven was in Galar for the Pokemon World Tournament, Steven had heard rumors of a "fossil expert" near Stow-On-Side. At first he noticed something.. a bit off about her but realized that she shared his passion for mining and discovery. Despite everything, (and Joseph's protests), Steven and Cara fell in love.</b></center>
+              </div>
+            </div>
+
+
+          </div> <!--ccard-->
+
+          <div class="cimg"> <img
+              src="https://dl.dropbox.com/scl/fi/pd1yh4rlf7z80g9si2xkt/Hoenn-Poster.png?rlkey=vk6jzr3d0g5vpy5vdxfqcpz29"
+              id="rr"> </div>
+        </div> <!--ccard-->
+
+        <!--Timeline-->
+        <div class="ccard g4" id="four">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>SINNOH</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--TIMELINE-->
+          <div class="timeline">
+            <center>
+
+            </center> <br>
+
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Salvatore D'Amore & Candice Alcala</h3>
+                <h4><i>Married, 2018</i></h4>
+                <li>Elián D'Amore (2018)</li>
+                <br>
+                <center><b>Sonny and Candice have been childhood friends ever since they discovered Sonny's Purrugly (then Glameow) on school property. While they went through a few ups and downs in their teenage years, the two have never been able to stay away from each other for long.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Conway Luna & Dawn Luna, née Dubois-Hayes + Kenneth Barnes</h3>
+                <h4><i>Married, 2017</i></h4>
+                <li>Isaac Luna (2018) <b>[Conway/Dawn]</b></li>
+                <li>Davina Luna (2019) <b>[Kenny/Dawn]</b></li>
+                <li>Loren Luna (2023) <b>[Conway/Kenny]</b></li>
+                <br>
+                <center><b>When Dawn begins a relationship with Conway Luna, they couldn't have been happier. On a trip
+                    to Hearthome City, Dawn reconnected with her childhood friend Kenneth Barnes. After some time, Dawn
+                    propositioned Kenny for a relationship, and with no knowledge of her marriage to Conway, Kenny
+                    accepted and unexpectedly found himself between their marriage. Conway initially didn't like him,
+                    but quickly grew fond after discovering they shared many common interests. </b></center> <br>
+                <center><i>Although Kenny has contributed not one, but two children into the Royal Family, Kenny is not
+                    recognized as an actual member of the family, he is simply known as "The Royal Paramour". Therefore
+                    he is not allowed to officially be married to either the Queen or her Consort.</i></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Tobias Stane & Ursula Stane, née LaMarche</h3>
+                <h4><i>Married, 2037</i></h4>
+                <li>Unnamed Son (2013) <b>[Tobias/???]</b></li>
+                <li>Jettison Bennett (2018) <b>[With Barry, Ursula has full custody.]</b></li>
+                <li>Jaime Bennett (2021) <b>[With Barry, Solidad has full custody.]</b></li>
+                <li>Juliet Bennett (2030) <b>[With Barry, Ursula has full custody.]</b></li>
+                <li><i>Possible Son (2037) </i></li>
+                <br>
+                <center><b>Ursula was previously married to Barry Bennett in 2018, however their relationship was never
+                    a happy one. Tobias and Ursula met in 2020 at a League Gala. There was an immediate attraction but
+                    due to Ursula's marriage to Barry, her affair with Tobias begins as an emotional one. Tobias never
+                    leaves Ursula's side and remains as her most trusted confidant and friend.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Regulus Weiss & May Daisy Weiss, née Oak</h3>
+                <h4><i>Married, 2012</i></h4>
+                <li>Brandon Weiss (2023)</li>
+                <li>Elaine Weiss (2027)</li>
+                <br>
+                <center><b>Reggie and Daisy grew up as neighbours in Pallet Town. When Reggie moved to Veilstone City, he kept in contact with Daisy through letters and when he started his journey he made his way to Kanto to travel with Daisy. The two traveled together through Kanto, Johto and Hoenn until Reggie returned home to bring his younger brother Paul with him while he was on his Battle Frontier challenge. The two kept in contact while Daisy was in Veterinarian Academy. After graduation, Daisy moved to Sinnoh so she and Reggie could expand the Daycare into a small Pokemon Hospital. </b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Paulus Weiss Sr. & Ashton Weiss, né Márquez & May Weiss, née Rockwell</h3>
+                <h4><i>Married, 2022</i></h4>
+                <li>Paulus Weiss Jr. (2016) <b>[Paul/Ash]</b></li>
+                <li>Aleksander Weiss (2017) <b>[Paul/Ash]</b></li>
+                <li>Cesaire Weiss (2018) <b>[Paul/Ash]</b></li>
+                <li>Tatia Weiss (2020) <b>[Paul/Ash]</b></li>
+                <li>Lianthe Weiss, née Hayden (2020) <b>[With Andrew, May has main custody.]</b></li>
+                <li>Niklaus Weiss (2024) <b>[Paul/Ash]</b></li>
+                <li>Unnamed Son (2026) <b>[Paul/May]</b></li>
+                <li>Unnamed Son (2030) <b>[Paul/Ash]</b></li>
+                <li>Convallaria Weiss (2035) <b>[Paul/Ash]</b></li>
+                <br>
+                <center><b>Paul and Ash originally married in 2018, May was only expecting to stay with Ash and Paul
+                    temporarily while she and Drew worked on their marriage after Lianthe's health scare. Drew however,
+                    was unable to stay faithful to May and had an affair with Nini Etienne. May entered Paul and Ash's
+                    marriage after they both confessed their desire to pursue a relationship with her. They later
+                    married in 2022.</b></center>
+              </div>
+            </div>
+
+          </div> <!--ccard-->
+          <div class="cimg"> <img
+              src="https://dl.dropbox.com/scl/fi/jwlz2id3mfk0oufwi42qe/Sinnoh-Poster.png?rlkey=jvdjyyurb2ijdr7jnopdbmc01"
+              id="rr"> </div>
+        </div> <!--ccard-->
+
+        <!--Timeline-->
+        <div class="ccard g5" id="five">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>UNOVA</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--TIMELINE-->
+          <div class="timeline">
+            <center>
+
+            </center> <br>
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Tristan Fontaine & Burgundy Fontaine, née Redwood</h3>
+                <h4><i>Married, 2017</i></h4>
+                <li>Ksawery Fontaine (2018)</li>
+                <li>Sterling Fontaine (2020)</li>
+                <br>
+                <center><b>Trip and Burgundy met at Clubsplosion and later traveled together. Eventually they parted ways so Trip could pursue his photography career which turned into Trip studying film. At Iris' Champion Coronation, Burgundy and Trip met again... Eventually somewhere along the line their relationship fell apart after the birth of their son "K." The two made the mutual decision to separate emotionally but stay together for the sake of their children. They often don't see eye to eye but do their best when it comes to decisions regarding the children.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Chili Griffith</h3>
+                <h4><i>Never Married</i></h4>
+                <li>Jeremiah Griffith (2018) <b>[With Georgia, Chili has full custody.]</b></li>
+                <li>Annabelle Griffith (2019) <b>[Trip/Georgia, Chili has full custody.]</b></li>
+                <li>Isabella Griffith (2020) <b>[Shamus/Georgia, Chili has full custody.]</b></li>
+                <br>
+                <center><b>Chili's relationship with Georgia ended just as fast as it started and initially Chili had thought their breakup would be the end of it. Enter Jeremy, the product of his rollercoaster relationship with Georgia. When Chili later found out that Georgia had other children, he felt a sense of duty to raise Jeremy's half siblings. He's doing his best.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Shamus Herrscher & Georgia Clarkson-Herrscher</h3>
+                <h4><i>Married, 2023</i></h4>
+                <li>Isabella Griffith (2020) <b>[Chili has full custody.]</b></li>
+                <li>Iwan Herrscher (2024)</li>
+                <li>Iúile Herrscher (2024)</li>
+                <br>
+                <center><b>Georgia and Shamus met in January of 2020, the two began training together while preparing for the upcoming League. They have an on/off relationship for about three years but eventually make it official after Georgia becomes an Elite Four Member underneath Iris. Originally unknown to Shamus, he and Georgia have an older daughter together, Isabella. When he later found out this information in the form of Izzy showing up at their door, it destabilizes their relationship.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Alder Miranys & Cynthia Aristollei, née Rowan-Florent</h3>
+                <h4><i>Married, 2016</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Aerion Aristollei (2003) <b>[With Cyrus, Cynthia was widowed in 2011.]</b></li>
+                <li>Daughter Aristollei <b>[With Cyrus, Cynthia was widowed in 2011.]</b></li>
+                <li>Daughter Aristollei <b>[With Cyrus, Cynthia was widowed in 2011.]</b></li>
+                <br>
+                <center><b>Cynthia and Alder began dating in 2013 after Cynthia felt inclined enough to accept Alder's dinner invitation- thinking that nothing would come of it as her divorce with Cyrus, now finalized with Cyrus' death, had left her haunted. Very quickly in their relationship did she realize there was more to Alder than she initally thought.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Stephan Sternn & Bianca Sternn, née Kirk</h3>
+                <h4><i>Married, ????</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Unnamed Son</li>
+                <li>Cher Sternn</li>
+                <br>
+                <center><b>After the Vertress Conference, Bianca and Stephan stayed in touch while they continued separate journeys. Eventually Bianca couldn't stand the distance and decided that Stephan would just have to put up with her after she headed to Johto to travel with him.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Iris Velaryon & Drayton</h3>
+                <h4><i>Married, ????</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Harper (2019)</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <br>
+                <center><b>Although one can argue that Drayton was as apathetic as he presented himself to be, it was hardly the case when it came to three things. Family. Battling. And Iris. They'd only spoken in passing when Iris had first met Drayden, Drayton's grandfather, but nothing more. Drayton always expected that naturally, he'd be the next Opelucid City Gym Leader after his grandfather, and it upset him when Drayden announced that Iris would instead, be taking the position. From there, Drayton's rivalry (albeit one-sided) with her began.. only, it didn't stay a rivalry for long.</b></center>
+              </div>
+            </div>
+
+          </div> <!--ccard-->
+          <div class="cimg"> <img
+              src="https://dl.dropbox.com/scl/fi/vdhys9aa4ryu2a9yzl02b/Unova-Poster.png?rlkey=1juelyrtshw64puovmticywth"
+              id="rr"> </div>
+        </div> <!--ccard-->
+
+        <!--Timeline-->
+        <div class="ccard g6" id="six">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>KALOS</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--TIMELINE-->
+          <div class="timeline">
+            <center>
+
+            </center> <br>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Grant Charpentier & Viola Charpentier, née Lapeyre</h3>
+                <h4><i>Married, 2015</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Carina Charpentier (2015)</li>
+                <br>
+                <center><b>From battling at the Chateau to saving Kalos, Grant and Viola's relationship was a rollercoaster of emotions. Shortly after the fall of Team Flare, the two could no longer deny that they had feelings for each other.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Cilan Griffith & Ariana Griffith, née Sinclair</h3>
+                <h4><i>Married, 2017</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Claudia Griffith (2020)</li>
+                <li>Estelle Griffith (2023)</li>
+                <li>Sophia Griffith (2028)</li>
+                <br>
+                <center><b>Cilan met Aria when she came into the cafe for lunch with her mentor Palermo.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Andrew Hayden & Ranina Hayden, née Etienne</h3>
+                <h4><i>Married, 2021</i></h4>
+                <li>Lianthe Weiss (2020) <b>[With May, May has main custody.]</b></li>
+                <li>Dulce Hayden (2021)</li>
+                <li>Merri Hayden (2025)</li>
+                <li>Calis Hayden (2026)</li>
+                <br>
+                <center><b>Nini and Drew met when May and Serena were on tour with Lisia. They later start an affair when May and Drew are staying in Lumiose with their daughter Lianthe, they'd had a fight that ended with Drew leaving their hotel. The two happened to run into each other that night.. When May notices that Drew is acting different, she takes Lianthe and leaves. Drew chooses to pursue his relationship with Nini. </b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Ilima Hikialani & Shauna Hikialani, née Armeniox</h3>
+                <h4><i>Married, 2016</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Eloise Hikialani (2016)</li>
+                <li>Louis Hikialani (2018)</li>
+                <li>Henri Hikialani (2022)</li>
+                <br>
+                <center><b>Shauna and Ilima met when Ilima first moved to Kalos to study abroad. She thought he was a bit too confident for her liking and well, Ilima loves games.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Jimmy Marshall & Mairin Marshall, née </h3>
+                <h4><i>Married, 2025</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Nadine Marshall (2027)</li>
+                <br>
+                <center><b>Jimmy and Mairin met at a <i>Toxic Koffing</i> concert in Galar. They ended up traveling through Galar together as Mairin took on the League Challenge and Jimmy worked on his music.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Garrett Oak & Miette Oak, née Shabboneau</h3>
+                <h4><i>Married, 2018</i></h4>
+                <li>Tommen Oak (2018)</li>
+                <li>Annika Oak (2020)</li>
+                <li>Aurora Oak (2020)</li>
+                <li>Torrance Oak (2024)</li>
+                <br>
+                <center><b>Gary and Miette met in while he was studying in Kalos. Miette thought he was dashing and nerdy, but she loved his confidence. She "nearly forgot about him" when he returned to Kanto to participate in Professor Amaranth's "Project Mew". Afterwards, Gary returned to Kalos for Miette- and spent a few weeks chasing her around as punishment for keeping her waiting.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Looker Reznikov & Anabel Reznikova, née Hart</h3>
+                <h4><i>Married, 2028</i></h4>
+                <li>Emma D'Aramitz-Toussaint (1997) <b>[Emma was adopted by Looker in 2013.]</b></li>
+                <li>Dawn Luna, née Dubois-Hayes (1999) <b>[With Johanna, Johanna has sole custody.]</b></li>
+                <li>Ronan Reznikov (2005) <b>[With ex-wife, she has main custody.]</b></li>
+                <li>Unnamed Di Vitis (2009) <b>[With Ariana Di Vitis (née Martell), Ariana has custody.]</b></li>
+                <li>Sheridan Reznikova (2035)</li>
+                <br>
+                <center><b>It takes Anabel three years to gain the courage to confess her feelings to Looker, who most definitely noticed her advances and had thwarted them for as long as he could manage. It certainly was a thorn in his side- ignoring his feelings that is, especially since he knew he wasn't ready for a relationship just yet. Anabel had a way of bringing out the best in him though.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Alain Rocha & Alexa Rocha, née Lapeyre</h3>
+                <h4><i>Married, 2016</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Amelie Rocha (2015)</li>
+                <br>
+                <center><b>An interview exactly a year after the disbanding of Team Flare led Alexa to Alain. The further she digged into Alain's involvement with Team Flare, the harder she fell for him.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Archer Stone</h3>
+                <li></li>
+                <li></li>
+                <li>Moriarty Stone (2034)</li>
+                <br>
+                <center><b>TBD.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Clemont Valmont & Lilia Valmont, née Altamirano</h3>
+                <h4><i>Married, 2018</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Marisol Valmont (2019)</li>
+                <br>
+                <center><b>Clemont and Lilia a year or so after their initial meeting when Lilia sought him out to recruit him to work on a project her father and his team were struggling with. </b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Thierry Vanchure & Serena Vanchure, née Mitchell</h3>
+                <h4><i>Married, 2017</i></h4><!--Full date unknown, will figure that out.-->
+                <li>Helene Vanchure (2021)</li>
+                <li>Adrian Vanchure (2024)</li>
+                <br>
+                <center><b>Dancing isn't the only thing Tierno does well, he also works well with music. When the dj hired by Lisia quits hours before a show, Serena calls Tierno who is more than happy to fill in the position. After the show, Lisia offers Tierno a permanent position on their team which he accepts. As the tour goes on, Serena and Tierno grow close.</b></center>
+              </div>
+            </div>
+
+          </div> <!--ccard-->
+          <div class="cimg"> <img
+              src="https://dl.dropbox.com/scl/fi/ezm8lz35yt2b568iywsi5/Kalos-Poster.png?rlkey=owwn2qjgd18gvxc7s3m6e8lj4"
+              id="rr"> </div>
+        </div> <!--ccard-->
+
+        <!--Timeline-->
+        <div class="ccard g7" id="seven">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>ALOLA</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--TIMELINE-->
+          <div class="timeline">
+            <center>
+
+            </center> <br>
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Alonzo De Montoya, né Guzman & Plumeria De Montoya</h3>
+                <h4><i>Married, 2020</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Lilith De Montoya (2017)</li>
+                <li>Seraph De Montoya (2021)</li>
+                <br>
+                <center><b>Guzma and Plumeria began an unlabeled relationship long before Team Skull was founded, but it was always clear that they were dating, and anyone who wanted to get on the Boss' good side had to get on Plumeria's first. Fortunately Plumeria has always had a soft heart- even if she hides it. After the Manalo Conference, Guzma and Plumeria got serious and began restoring the Shadder Manor, aka, "The Shady House."</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Gladion Hausler & Selene Hausler, née Elizondo</h3>
+                <h4><i>Married, ????</i></h4> <!--Full date unknown, will figure that out.-->
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <br>
+                <center><b>Whilst on his search with his family for his father, they made a stop at Cinnabar Island for fuel. While they were there, Gladion met Selene and her brother Helios. Selene had a knack for healing Pokemon, but didn't have the opportunity to pursue it on Cinnabar so Gladion offered her an apprenticeship at Aether whenever she was ready. </b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Mallow Kāne & Lillie Hausler</h3>
+                <h4><i>Married, ????</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Maile Kāne</li>
+                <br>
+                <center><b>From the moment they met, Mallow and Lillie had a friendship on a different level than Lana and Mallow did. They begin exchanging letters while Lillie is on her journey to find her father, leaving Mallow alone at home. When she returns, Mallow makes the decision to go on her own culinary journey like Ulu, for once putting herself before everyone else. She and Lillie begin a long distance relationship.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Lana Starlight & Misty Starlight, née Ward</h3>
+                <h4><i>Married, 2032</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Summer Harrison (2016) <b>[With Brock, Brock has sole custody.]</b></li>
+                <li>Damon Harrison (2021) <b>[With Brock, Brock has sole custody.]</b></li>
+                <li>Micah Harrison (2021) <b>[With Brock, Brock has sole custody.]</b></li>
+                <li>Ariel Sketchit (2026) <b>[With Tracey, Misty has sole custody.]</b></li>
+                <li>Shiera Starlight (2033)</li>
+                <br>
+                <center><b>Misty and Lana met when Misty and Brock visited Alola for the first time. The two kept contact through letters afterwards. Though the letters stopped in frequency their fondness for each other never waned. When Misty and Tracey went on vacation to Alola with their daughter Ariel, Misty and Lana reconnected over dinner. Later into their stay, Lana confesses her feelings for Misty and the two begin an affair that ends with them getting married.</b></center>
+              </div>
+            </div>
+
+          </div> <!--ccard-->
+          <div class="cimg"> <img
+              src="https://dl.dropbox.com/scl/fi/g3ll6ymrvzf55lpdapa3t/Alola-Poster.png?rlkey=4d9ypso7xr8yrzu9w2jvdh869"
+              id="rr"> </div>
+        </div> <!--ccard-->
+
+        <!--Timeline-->
+        <div class="ccard g8" id="eight">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>GALAR</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--TIMELINE-->
+          <div class="timeline">
+            <center>
+
+            </center> <br>
+
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Grimsley Addams & Caitlin Addams, née Baudelaire</h3>
+                <h4><i>Married, 2014</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Lupin Addams (2004)</li>
+                <li>Lavender Addams (2009)</li>
+                <li>Indigo Addams (2015)</li>
+                <li>Violet Addams (2015)</li>
+                <li>Thistle Addams (2017)</li>
+                <li>Vendetta Addams (2020)</li>
+                <li>Cupid Addams (2026)</li>
+                <br>
+                <center><b>When Caitlin left Sinnoh and her mentor Darach behind for Unova she was on a mission to become Champion. When she met Grimsley, she was immediately enamoured by him- and he was intimidated by her, how powerful she was for her age. They began a playful rivalry that slowly blossomed into romance (despite Darach's protests). Caitlin didn't let her relationship with Grimsley get in the way of her professional career.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Piers Burdon-Sheppard & Roxie Love</h3>
+                <h4><i>Married, 2043</i></h4>
+                <li>Sabbath Love-Sheppard (2019)</li>
+                <li>Zeppelin Love-Sheppard (2021)</li>
+                <li>Nirvana Love-Sheppard (2025)</li>
+                <br>
+                <center><b>There was an almost instant spark when Roxie first met Piers, they would unconsciously gravitate towards each other between sets, eating breakfast together at 2 am after concerts, jamming out and talking for hours. It began and stayed as an unlabeled relationship, they also had to keep it a secret because they knew that if anything went wrong it would tear the Tour apart.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Quillon Cross & Victor Guerrero</h3>
+                <h4><i>Married, 2022</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Sigorn Cross (2016)</li>
+                <li>Warren Cross (2023)</li>
+                <li>Unnamed Daughter </li>
+                <br>
+                <center><b>Quillon and Victor met at the Isle of Armor after Victor's breakup with Hop. Victor began training under Mustard as his protege, intending to take over the Dojo when Mustard felt he was ready.</b></center>
+              </div>
+            </div>
+
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Hizdahr (Hop) Masoud & Sonia Lauré Garrett</h3>
+                <h4><i>Married, 2021</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Daario Masoud (2021)</li>
+                <li>Olyvar Masoud (2024)</li>
+                <li>Freyja Masoud (2025)</li>
+                <br>
+                <center><b>When Hop met Sonia, there was little to no familiarity between them- Sonia hadn't even known that Hop existed. Although she and Leon had been friends since their journey, she'd never met his family. After the Darkest Day, Hop was offered an apprenticeship with Sonia, but caught up in her own world with her previous boyfriend, Sonia left most of the lab duties to Hop. After being left at the altar, Sonia returned to Wedgehurst and was met with resistance from her now older, more experienced assistant.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Raihan Shahryar & Tarak (Leon) Shahryar, née Masoud</h3>
+                <h4><i>Married, 2018</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Ramzi Shahryar (2019)</li>
+                <li>Róise Shahryar (2019)</li>
+                <br>
+                <center><b>Under his conservatorship, Leon didn't have much of a chance to have interpersonal relationships that swayed to romance, but he always had Raihan. Leon wasn't completely blind to Raihan's feelings, but he knew that it would be.. controversial to act on them due to Raihan being Rose's son. After Bea dethroned Leon, there was an... adjustment period that strained a lot of his "friendships." But not with Raihan. Raihan stayed with him though it all.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Rose Shahryar & Oleana Hightower</h3>
+                <h4><i>Married, 2024</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Thorne Hightower (2015)</li>
+                <li>Nettles Hightower (2025)</li>
+                <br>
+                <center><b>What started as a professional relationship between the previous Chairman and his bright young Researcher turned into more as Rose came closer and closer to achieveing his dream of clean, renewable energy. Oleana's change in status wasn't due to their budding relationship however, but due to her own ambition for power, in fact, she wanted Rose's dream to become true maybe even more than he did. She was.. enthralled by him, and even when they were apart they yearned to be together.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Bede Westford & Gloria Westford, née Guerrero</h3>
+                <h4><i>Married, ????</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Unnamed Son</li>
+                <li>Opal Westford </li>
+                <li>Unnamed Son</li>
+                <br>
+                <center><b>Bede and Glori met during the League Season that followed the Darkest Day. Glori was traveling with her twin brother Victor. In the beginning, the two couldn't stand each other (with hidden feelings for both of them). Glori was a formidible rival for Bede, which ticked him off, since he was endorsed by Chairman Rose himself. After Bede's fall from grace however, Glori was the only one of their old "friends" who still talked to him.</b></center>
+              </div>
+            </div>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Milo & Vanessa, née</h3>
+                <h4><i>Married, ????</i></h4> <!--Full date unknown, will figure that out.-->
+                <li>Dalton</li>
+                <br>
+                <center><b>Nessa and Milo have known each other since childhood, although Milo never considered himself Nessa's rival, he liked her enough to battle with her whenever she asked. For a farm boy, Nessa was the closest he could get to feeling "normal". The two dated as teenagers before breaking up when Nessa was recruited as a model, later in their early twenties they reunited.</b></center>
+              </div>
+            </div>
+
+          </div> <!--ccard-->
+          <div class="cimg"> <img
+              src="https://dl.dropbox.com/scl/fi/ykkzuz6x0bpqf4sznu59u/Galar-Poster.png?rlkey=bjiqt8v073w3fr23s6sav1mz9"
+              id="rr"> </div>
+        </div> <!--ccard-->
+
+        <!--Timeline-->
+        <div class="ccard g9" id="nine">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>PALDEA</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--TIMELINE-->
+          <div class="timeline">
+            <center>
+
+            </center> <br>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h3>Kieran & Juliana, née</h3>
+                <h4><i>Married, ????</i></h4>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <br>
+                <center><b>When the secret about Ogerpon spiraled out of control, Juli for sure assumed that her friendship with Kieran would never recover. When she transferred to Blueberry Academy and saw how he'd changed, and realized that he was acting as if she didn't exist- she was devastated. After she beat him and won the title of Champion, she and Kieran had a serious conversation. Nowadays, Kieran and Juliana are on the same page, in fact, you can't tell either of them anything without expecting the other to know because they refuse to keep even the smallest secrets. Kieran and Julia don't care, their relationship is based on love, respect and trust.</b></center>
+              </div>
+            </div>
+
+
+         <!--
+              <div class="titem">
+              <div class="event">
+                <h3></h3>
+                <h4><i>Married, </i></h4>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <br>
+                <center><b></b></center>
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3></h3>
+                <h4><i>Married, </i></h4>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <br>
+                <center><b></b></center>
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3></h3>
+                <h4><i>Married, </i></h4>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <br>
+                <center><b></b></center>
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3></h3>
+                <h4><i>Married, </i></h4>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <br>
+                <center><b></b></center>
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3></h3>
+                <h4><i>Married, </i></h4>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <br>
+                <center><b></b></center>
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3></h3>
+                <h4><i>Married, </i></h4>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <br>
+                <center><b></b></center>
+              </div>
+            </div> -->
+
+
+          </div> <!--ccard-->
+          <div class="cimg"> <img
+              src="https://dl.dropbox.com/scl/fi/7icuw9hhqk3ecj50d51vh/Paldea-Poster-Scarlet.png?rlkey=bnu88da5xquxqkop8ru5fkpm9"
+              id="rr"> </div>
+
+        </div> <!--ccard-->
+
+
+      </section><!--wrapper-->
+    </div><!--container-->
+  </div><!--outer-->
+
+  <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/"
+target="_blank"><img src="https://c.statcounter.com/12549123/0/c1f866bd/1/"
+  alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a>
+
+
+  <!--SCRIPTS
+ DON'T MESS WITH THE SCRIPTS UNLESS YOU KNOW WHAT YOU'RE DOING-->
+  <script>
+    $(document).ready(function () {
+
+      /*CCARD COLORS*/
+      $('.ccard').each(function () {
+        var groupClass = $(this).attr('class').split(" ")[1];
+
+        $(this).find('.cell1').addClass(groupClass);
+        $(this).find('.cell2').addClass(groupClass);
+        $(this).find('.ctags').addClass(groupClass);
+      });
+
+      /*CARDS*/
+      $('.cl').on('click', function (e) {
+        var currentAttrValue = $(this).attr('href');
+        var groupClass = $('.ccard' + currentAttrValue).attr('class').split(" ")[1];
+
+        window.location.hash = $(this).attr('href');
+        $('.ccard' + currentAttrValue).addClass('active').siblings('.ccard').removeClass('active');
+        $(this).addClass('active').siblings('.cl').removeClass('active');
+      });
+
+      /*HASH SCRIPT*/
+      var hash = $.trim(window.location.hash);
+
+      if (hash) {
+        $('.cl[href$="' + hash + '"]').trigger('click');
+      };
+
+
+      /*TOOLTIPS*/
+      $(function () {
+        $(".ccard").tooltip({
+          classes: {
+            "ui-tooltip": "tooltip"
+          },
+          position: {
+            my: "right bottom",
+            at: "right top",
+            collision: "none"
+          },
+        });
+      });
+
+    }); //DOCUMENT READY
+
+  </script>
+
+</body>
+
+</html>

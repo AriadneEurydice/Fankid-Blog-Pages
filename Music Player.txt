@@ -1,0 +1,128 @@
+<!--
+        MUSIC PLAYER #03 by glenthemes
+        ♬ glenthpvs.tumblr.com/player03
+--->
+<link href="//fonts.googleapis.com/css?family=Public+Sans|Karla" rel="stylesheet">
+<link href="//glenthemes.github.io/-music-/glenplayer03.css" rel="stylesheet">
+<script src="//glenthemes.github.io/-music-/glenplayer03.js"></script>
+<style element="glenplayer03">
+:root {
+    --MusicBox-Left-Or-Right:right;
+    --MusicBox-Edge-Distance:50px;
+    
+    --MusicBox-Width:250px;
+    
+    --MusicBox-Title-Padding:15px;
+    --MusicBox-Title-Background:-webkit-linear-gradient(left, var(--g12) 0%, var(--color) 50%, var(--g1) 100%);
+    --MusicBox-Title-Size:10px;
+    --MusicBox-Title-Color:var(--cards);
+    --MusicBox-Title-Corner-Roundness:0px;
+    
+    --MusicBox-Main-Background:var(--box);
+    --MusicBox-Main-Padding:14px;
+    --MusicBox-Side-Borders: var(--border);
+    
+    --Album-Art-Size:32px;
+    --Album-Art-Corner-Roundness:3px;
+    --Album-Art-Gap:10px;
+    
+    --Song-Name-Size:9px;
+    --Song-Name-Color:var(--text);
+    
+    --Artist-Name-Size:10px;
+    --Artist-Name-Color:var(--text);
+    
+    --Music-Buttons-Size:11px;
+    --Music-Buttons-Color:var(--text);
+    
+    --Track-Spacing:9px;
+    
+    --Autoplay-First-Song:no;
+    --Autoplay-Next-Song:yes;
+    --Loop-Playlist-Infinitely:no;
+}
+</style>
+
+<div glenplayer03>
+  <div musicbox-title>music box</div>
+  
+    
+<img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+<div song-name></div>
+<div artist-name></div>
+<audio src=""></audio>
+
+ 
+ <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+ <div song-name></div>
+ <div artist-name></div>
+ 
+ <audio src=""></audio>
+
+
+<img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+<div song-name></div>  
+<div artist-name></div>
+
+<audio src=""></audio>
+
+<img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+<div song-name></div>
+<div artist-name></div>
+
+<audio src=""></audio>
+
+  
+  <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+  <div song-name></div>
+  <div artist-name></div>
+  
+  <audio src=""></audio>
+
+    
+<img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+<div song-name></div>
+<div artist-name></div>
+
+<audio src=""></audio>
+
+
+<img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+<div song-name></div>
+<div artist-name></div>
+
+<audio src=""></audio>
+
+   
+  <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+  <div song-name></div>
+  <div artist-name></div>
+  
+  <audio src=""></audio>
+
+    
+<img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+<div song-name></div>
+<div artist-name></div>
+
+<audio src=""></audio>
+
+  
+  <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+  <div song-name></div>
+  <div artist-name></div>
+  
+  <audio src=""></audio>
+    
+</div> <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/"
+target="_blank"><img src="https://c.statcounter.com/12549123/0/c1f866bd/1/"
+  alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a>

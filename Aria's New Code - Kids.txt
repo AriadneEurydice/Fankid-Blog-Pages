@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+
+<!-- PAGE THEME #6: CAUTERIZE by @nonspace.
+  Don't steal.
+  Don't claim as your own.
+  Don't use as base code.
+  Editing for personal use is fine! 
+  Updated 00/00/0000 -->
+
+<head>
+
+  <title>Griffith, Jeremiah.</title><meta charset="utf-8"/>
+  <link rel="icon" type="image/png"
+    href="https://64.media.tumblr.com/5797de73fd3f2c3479b9769c48846805/9844d37cdfad0d6a-92/s1280x1920/529b7a6e8338ef88fd1563f9ad2e62722476592e.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+
+
+  <!--FONT AWESOME ICONS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!--JQUERY-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!--JQUERY UI TOOLTIPS-->
+  <script src="https://static.tumblr.com/vuxbcsk/6FTp5y7g3/jquery-ui.min.js"></script>
+  <script>
+    var dd = 2;  // how many images you have to change
+    var cnt = 0;
+    function chng() {
+
+      var rotator = document.getElementById('rr');  // change to match image ID
+      var imageDir = '0';                          // change to match images folder 
+
+
+      var images = [
+        'https://dl.dropbox.com/scl/fi/agcr7wds0a4oql7e57a3e/Sterling_2.png?rlkey=hbv33mjzt0f89kwlgx93imk18', 'https://dl.dropbox.com/scl/fi/qdeyckxjlvtsoyldstm4f/Sterling.png?rlkey=zwkpq007olrueieqf5raqbyxb'];
+
+      cnt++;
+
+      var len = images.length;
+      if (cnt < dd) {
+        rr.src = images[cnt];
+      }
+      else if (cnt == len) {
+        rr.src = images[0];
+        cnt = 0;
+      }
+    }
+
+  </script>
+
+  <script type="text/javascript">
+    // Wait for document to load
+    document.addEventListener("DOMContentLoaded", function (event) {
+      document.documentElement.setAttribute("data-theme", "light");
+
+      // Get our button switcher
+      var themeSwitcher = document.getElementById("theme-switcher");
+
+      // When our button gets clicked
+      themeSwitcher.onclick = function () {
+        // Get the current selected theme, on the first run
+        // it should be `light`
+        var currentTheme = document.documentElement.getAttribute("data-theme");
+
+        // Switch between `dark` and `light`
+        var switchToTheme = currentTheme === "dark" ? "light" : "dark"
+
+        // Set our currenet theme to the new one
+        document.documentElement.setAttribute("data-theme", switchToTheme);
+      }
+    });
+  </script>
+
+
+  <style>
+    /*SET COLORS*/
+    :root {
+      --g1: #17ce54;
+      --g12: #4b15c9;
+      --background: #d1d1d1;
+      --bullet: #880d2c;
+      --text: #000;
+      --border: #eee;
+      --box: #fff;
+      --credit-and-nav: #ffffff;
+      --color: #970a0a; /*bold + italics*/
+      --cards: #ffffff; /*navigation cards*/
+      --font: '';
+      --font-size: px;
+      --header-size: px;
+      --line-height: %;
+     --normal: #9FA19F;
+      --grass: #3FA129;
+      --fire: #E62829;
+      --water: #2980EF;
+      --electric: #FAC000;
+      --ice: #3DCEF3;
+      --fighting: #FF8000;
+      --poison: #9141CB;
+      --ground: #915121;
+      --flying: #81B9EF;
+      --psychic: #EF4179;
+      --bug: #91A119;
+      --rock: #AFA981;
+      --ghost: #704170;
+      --dragon: #5060E1;
+      --dark: #624D4E;
+      --steel: #60A1B8;
+      --fairy: #EF70EF;
+
+    }
+
+
+    [data-theme="dark"] {
+      --background: #000;
+      --text: #fff;
+      --box: #000;
+      --border: #161616;
+      --credit-and-nav: #000;
+
+      animation: lazyload 0.5s;
+    }
+
+    a:link,
+    a:active,
+    a:visited {
+      text-decoration: none;
+      color: var(--g1);
+      /* IMPORTANT. CAN BE CHANGED TO A HEX CODE*/
+    }
+    
+    #pkmncard {
+      border: 1px dashed var(--g1);
+    }
+
+    .name,
+    .sprite,
+    .ability,
+    .item {
+      border: 1px dashed var(--g12);
+    }
+
+
+    .cell2 img {
+      padding-right: 95px;
+    }
+
+
+    /*IMAGE*/
+    .cimg {
+      margin-top: -340px;
+      /*MOVE COLORED BOX UP AND DOWN, A BIGGER # MEANS FURTHER UP PAGE, SMALLER IS FURTHER DOWN PAGE*/
+      margin-left: 230px;
+      /*MOVE COLORED BOX SIDE TO SIDE*/
+      padding: 0px;
+      height: 200px;
+      /*CHANGE BOX HEIGHT*/
+      width: 256px;
+      /*CHANGE BOX WIDTH*/
+
+
+    }
+
+    .cimg img {
+      margin-left: 30px;
+      /*MOVE CHARACTER SIDE TO SIDE*/
+      margin-top: -340px;
+      /*MOVE CHARACTER UP AND DOWN, A BIGGER # MEANS FURTHER UP PAGE, SMALLER IS FURTHER DOWN PAGE*/
+      height: 670px;
+    }
+  </style>
+
+  <link rel="stylesheet"
+    href="https://dl.dropbox.com/s/scl/fi/qs57dj1puo0sltrrd10ws/Hosting-Aria.css?rlkey=dwgoma3pd3i0ghywvlp1fnr9f&dl=0">
+
+</head>
+
+<body>
+  <div id="outer">
+    <div id="container">
+
+      <div id="credit">
+        <div class="switch"><input type="button" button class="button" value="CHANGE ART" onclick="chng()" /></div>
+
+        <div class="switch" , id="theme-switcher"><a><i class="fa fa-moon-o" style="font-size: 14px;" aria-hidden="true"
+              title="light/dark mood"></i></a></button></div>
+        <a href="/"><i class="fa fa-home" style="font-size: 14px;" aria-hidden="true" title="home"></i></a>
+        <a href="/faqs">
+          <i class="fa fa-user" aria-hidden="true" title="faqs"></i></a>
+        <a href="/ask">
+          <i class="fa fa-envelope" aria-hidden="true" title="message"></i></a>
+        <!--CREDIT, DON'T CHANGE!!!)-->
+        <a href="https://nonspace.tumblr.com">
+          <i class="fa fa-copyright" aria-hidden="true"></i> NNSPC</a>
+      </div>
+      <!--HEADER-->
+      <header>
+        <!--CHARACTER LINKS-->
+        <nav id="cnav">
+          <div class="cl active" href="#one">BACKGROUND</div>
+          <div class="cl" href="#two">APPEARANCE</div>
+          <div class="cl" href="#three">MEDICAL </div>
+          <div class="cl" href="#four">INTERESTS</div>
+          <div class="cl" href="#five">RELATIONSHIPS</div>
+          <div class="cl" href="#six">TIMELINE</div>
+          <div class="cl" href="#seven">TRIVIA</div>
+          <div class="cl" href="#eight">POKÉMON</div>
+          <div class="cl"><a href="https://pkmn-thenextgeneration.tumblr.com/characters">OTHER PROFILES</a></div>
+        </nav>
+
+        <div class="cimg"> <img
+            src="https://64.media.tumblr.com/ae5dffd9952912dde4a84fd309205a38/a083ff89bc23f692-72/s1280x1920/424fe79a77bae80aeb66c721f6d53fa278a1fb48.png"
+            id="rr"> </div>
+      </header>
+
+      <!--CHARACTER CARDS-->
+      <section id="wrapper">
+
+        <!--CHARACTER ONE-->
+        <div class="ccard g1 active" id="one">
+          <div class="headline">
+
+            <!--General Information-->
+            <center>
+              <h2></h2>
+            </center>
+          </div>
+          <!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Full name:</i> <span> </span> </li>
+              <li> <i>Nickname:</i> <span> </span> </li>
+              <li> <i>Gender/Pronouns:</i> <span></span> <span> </span> </li>
+              <li> <i>D.O.B:</i> <span> </span> </li>
+              <li> <i>Status:</i> <span> <b>ALIVE/DEAD</b> </span> </li>
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Occupation:</i> <span> </span> </li>
+              <li> <i>Hometown:</i> <span> </span> </li>
+              <li> <i>Current Residence:</i> <span> </span> </li>
+              <li> <i>Traveling With:</i><span> </span> </li>
+              <li> <i>Goal:</i><span> </span> </li>
+            </ul>
+          </div>
+          <!--biodata-->
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+            <h3>Synopsis</h3>
+     Aria cried making this. If you're using this version, please leave a comment so I can know because I would like to keep up with the people using it so I don't drastically change it again. <a href="https://dl.dropbox.com/scl/fi/5xze3bnqljnvbasar1gwb/Aria-s-New-Code-Kids.txt?rlkey=xf7dljmfaohdsz2zw033u3r4n&st=yihxe1ew&dl=0">Click Here</a> for the link to the code.
+<b>Bold</b><i>Italics</i>
+          </div>
+          <!--biotxt-->
+
+        </div>
+        <!--ccard-->
+
+
+        <!--Appearance-->
+        <div class="ccard g2" id="two">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Appearance</h2>
+            </center>
+          </div>
+          <!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Hair Color:</i> <span> </span> </li>
+              <li> <i>Eye Color:</i> <span> </span> </li>
+              <li> <i>Hairstyle/Texture:</i> <span>texture</span> <span>style</span></li>
+              <li> <i>Skin Tone:</i> <span> </span> </li>
+              <li> <i>Markings/Tattoos:</i> <span> </span> </li>
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Accessories:</i> <span> </span> </li>
+              <li> <i>Body Type:</i> <span> </span> </li>
+              <li> <i>Shoe Size:</i> <span> 4 </span></li>
+              <li> <i>Style:</i><span> </span> </li>
+              <li> <i>Makeup:</i><span> </span> </li>
+            </ul>
+          </div>
+          <!--biodata-->
+
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+            <h3>Main Outfit:</h3>
+            <li><i></i>
+            <li><i></i>
+            <li><i></i>
+            <li><i></i>
+            <li><i></i>
+            <li><i></i>
+
+
+          </div>
+        </div>
+        <!--biotxt-->
+        <!--ccard-->
+
+
+        <!--Med Information-->
+        <div class="ccard g3" id="three">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Medical Information</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Height:</i> <span> </span> </li>
+              <li> <i>Weight:</i> <span> </span> </li>
+              <li> <i>Blood Type:</i> <span> </span> </li>
+              <li> <i>Allergies:</i> <span> </span> </li>
+              <li> <i>Health:</i> <span></span> </li>
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Illnesses:</i> <span> </span> </li>
+              <li> <i>Physical Disability:</i> <span> </span> </li>
+              <li> <i>Special Ability:</i><span> </span> </li>
+              <li> <i>Dominant Hand:</i> <span></span> </li>
+              <li> <i>Other:</i><span> </span> </li>
+            </ul>
+          </div>
+          <!--biodata-->
+
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Integer quis auctor elit sed vulputate mi. Tortor pretium viverra suspendisse potenti
+            nullam ac. Eros donec ac odio tempor orci dapibus. Maecenas ultricies mi eget mauris pharetra et ultrices.
+            Adipiscing diam donec adipiscing tristique risus nec feugiat in. Et pharetra pharetra massa massa ultricies
+            mi quis. Sit amet luctus venenatis lectus. Metus aliquam eleifend mi in nulla posuere. Elit at imperdiet dui
+            accumsan sit amet. Tellus elementum sagittis vitae et leo. Gravida neque convallis a cras semper. Tristique
+            senectus et netus et malesuada fames ac turpis. A erat nam at lectus urna duis convallis. Duis at tellus at
+            urna condimentum mattis pellentesque id. Etiam non quam lacus suspendisse faucibus interdum.
+
+            Id eu nisl nunc mi ipsum faucibus vitae. Sodales ut etiam sit amet nisl purus in mollis. Quisque non tellus
+            orci ac auctor augue. Sed libero enim sed faucibus turpis. Urna nunc id cursus metus aliquam. Purus non enim
+            praesent elementum facilisis. Cum sociis natoque penatibus et magnis dis parturient montes. Integer quis
+            auctor elit sed vulputate mi sit amet. Scelerisque mauris pellentesque pulvinar pellentesque. At in tellus
+            integer feugiat scelerisque varius.
+          </div>
+        </div>
+        <!--biotxt-->
+        <!--ccard-->
+
+
+        <!--Interests-->
+        <div class="ccard g4" id="four">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Interests</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Book Genre:</i> <span> </span> </li>
+              <li> <i>Favorite Book:</i> <span> </span> </li>
+              <li> <i>Music Genre:</i> <span> </span> </li>
+              <li> <i>Favorite Group:</i> <span> </span> </li>
+              <li> <i>Transportation:</i> <span></span> </li>
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Type Preference:</i> <span> <img src="https://cdn2.bulbagarden.net/upload/6/60/PsychicIC_Big.png">
+                </span></li>
+              <li> <i>Time Of Day:</i> <span> Night </span> </li>
+              <li> <i>Favorite Color:</i><span> </span> </li>
+              <li> <i>Favorite Food:</i><span> </span> </li>
+              <li> <i>Languages:</i> <span></span> </li>
+            </ul>
+
+          </div>
+          <!--biodata-->
+
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+            
+            <div class="row">
+   <div class="column">
+      <h3>Likes:</h3>
+      <ul>
+         <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            
+      </ul>
+   </div>
+   <div class="column">
+      <h3>Dislikes:</h3>
+      <ul>
+         <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            <li>
+            
+      </ul>
+   </div>
+   <div class="column">
+      <h3>Fears:</h3>
+      <ul><li>
+         <li>
+         <li>
+         <li>
+         <li>
+         <li>
+         <li>
+         <li>
+         <li>
+         <li>
+         <li>
+         <li>
+         <li>
+         </ul>
+   </div>
+</div>
+<p>
+  <h3>Habits:</h3>
+            <li>
+            <li>
+            <li>
+            <li>
+              <h3>Extra:</h3>
+            <li>
+            <li>
+            <li>
+            <li>
+
+          </div>
+        </div>
+        <!--biotxt-->
+        <!--ccard-->
+
+
+        <!--Family-->
+        <div class="ccard g5" id="five">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Relationships</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Status:</i> <span> </span> </li>
+              <li> <i>Sexuality:</i> <span> </span> </li>
+              <li> <i>Best Friend:</i> <span> </span> </li>
+              <li> <i>Friends:</i> <span></span> </li>
+              <li> <i>Love Interest:</i> <span> </span> </li>
+
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Main Rival(s):</i> <span> </span> </li>
+              <li> <i>Mentor(s):</i> <span> </span> </li>
+              <li> <i>Allies:</i><span> </span> </li>
+              <li> <i>Enemies:</i><span> </span> </li>
+              <li> <i>Heroes:</i> <span></span> </li>
+            </ul>
+          </div>
+          <!--biodata-->
+
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+            <center>
+              <h4>Here you will find most, if not all, of 's family members! <br> <a href="/">Click here</a> for the
+                full,
+                updated family tree!</h4>
+            </center>
+<h3>Immediate Family:</h3>
+<div class="row">
+   <div class="column">
+      <b>
+         Father<br>
+         Mother<br>
+         Older Brother<br>
+         Older Sister<br>
+         Younger Brother<br>
+         Younger Sister<br>
+         Uncle<br>
+         Aunt<br>
+         Cousin<br>
+         Paternal Grandfather<br>
+         Paternal Grandmother<br>
+         Maternal Grandfather<br>
+         Maternal Grandmother<br>
+      </b>
+   </div>
+   <div class="column">
+
+      <br>
+      , née<br>
+      , née<br>
+      , née<br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+   </div>
+   <div class="column">
+      <i>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+      </i>
+   </div>
+</div>
+<p>
+</p>
+
+<h3>Extended Family:</h3>
+<div class="row">
+   <div class="column">
+      <b>
+         Father<br>
+         Mother<br>
+         Older Brother<br>
+         Older Sister<br>
+         Younger Brother<br>
+         Younger Sister<br>
+         Uncle<br>
+         Aunt<br>
+         Cousin<br>
+         Paternal Grandfather<br>
+         Paternal Grandmother<br>
+         Maternal Grandfather<br>
+         Maternal Grandmother<br>
+      </b>
+   </div>
+   <div class="column">
+
+      <br>
+      , née<br>
+      , née<br>
+      , née<br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+   </div>
+   <div class="column">
+      <i>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+         ()<br>
+      </i>
+   </div>
+</div>
+
+           
+
+            <center>
+              <h4>Character's notable relationships.</h4>
+            </center>
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/"></a></h3>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/"></a></h3>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/"></a></h3>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/"></a></h3>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/"></a></h3>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/"></a></h3>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/"></a></h3>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/"></a></h3>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/"></a></h3>
+
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h3><a href="/"></a></h3>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--biotxt-->
+        <!--ccard-->
+
+
+        <!--Timeline-->
+        <div class="ccard g7" id="six">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Timeline</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--TIMELINE-->
+          <div class="timeline">
+            <center>
+              <h4>Here is a semi-detailed timeline of 's life!</h4>
+            </center> <br>
+
+            <!--EVENT ONE-->
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+                Lorem ipsum dolor sit amet.
+              </div>
+            </div>
+
+            <!--EVENT TWO-->
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+                Lorem ipsum dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+                Lorem ipsum dolor sit amet.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+                Lorem ipsum dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+                Lorem ipsum dolor sit amet.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+                Lorem ipsum dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="event">
+                <h0>title</h0><br>
+                Lorem ipsum dolor sit amet.
+              </div>
+            </div>
+
+
+          </div> <!--ccard-->
+        </div> <!--ccard-->
+
+
+        <!--Trivia-->
+        <div class="ccard g8" id="seven">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Trivia</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Japanese Name:</i> <span> ()</span> </li>
+              <li> <i>Voice Claim:</i> <span> </span> </li>
+              <li> <i>Japanese Voice Claim:</i> <span> </span> </li>
+              <li> <i>Accent:</i><span> </span> </li>
+              <li> <i>Catchphrase:</i> <span> </span> </li>
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Pokémon Zodiac:</i> <span> </span> </li>
+              <li> <i>Star Sign:</i> <span> </span> </li>
+              <li> <i>Birth Flower:</i> <span></span> </li>
+              <li> <i>Floriography:</i> <span>Kindness, Commitment</span> <span><b>Bluebell</b></span> </li>
+              <li> <i>Personality Type:</i><span> </span> </li>
+            </ul>
+          </div>
+          <!--biodata-->
+
+          <!--January - Carnation & Snowdrop
+            February - Violet & Primrose
+            March - Daffodil
+            April - Daisy & Sweet Pea
+            May - Lily of the Valley & Hawthorn
+            June - Rose & Honeysuckle
+            July - Larkspur & Water Lily
+            August - Gladiolus & Poppy
+            September - Aster & Morning Glory
+            October - Marigold & Cosmos
+            November - Chrysanthemum
+            December - Narcissus & Holly-->
+
+
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Integer quis auctor elit sed vulputate mi. Tortor pretium viverra suspendisse potenti
+            nullam ac. Eros donec ac odio tempor orci dapibus. Maecenas ultricies mi eget mauris pharetra et ultrices.
+            Adipiscing diam donec adipiscing tristique risus nec feugiat in. Et pharetra pharetra massa massa ultricies
+            mi quis. Sit amet luctus venenatis lectus. Metus aliquam eleifend mi in nulla posuere. Elit at imperdiet dui
+            accumsan sit amet. Tellus elementum sagittis vitae et leo. Gravida neque convallis a cras semper. Tristique
+            senectus et netus et malesuada fames ac turpis. A erat nam at lectus urna duis convallis. Duis at tellus at
+            urna condimentum mattis pellentesque id. Etiam non quam lacus suspendisse faucibus interdum.
+
+            Id eu nisl nunc mi ipsum faucibus vitae. Sodales ut etiam sit amet nisl purus in mollis. Quisque non tellus
+            orci ac auctor augue. Sed libero enim sed faucibus turpis. Urna nunc id cursus metus aliquam. Purus non enim
+            praesent elementum facilisis. Cum sociis natoque penatibus et magnis dis parturient montes. Integer quis
+            auctor elit sed vulputate mi sit amet. Scelerisque mauris pellentesque pulvinar pellentesque. At in tellus
+            integer feugiat scelerisque varius.
+          </div>
+        </div>
+        <!--biotxt-->
+        <!--ccard-->
+
+
+        <!--Pokémon-->
+        <div class="ccard g9" id="eight">
+          <div class="headline">
+
+            <!--CHARACTER NAME-->
+            <center>
+              <h2>Pokémon</h2>
+            </center>
+
+          </div>
+          <!--headline-->
+
+          <!--PROFILE-->
+          <div class="biodata">
+
+            <!--LEFT-->
+            <ul class="cell1">
+              <li> <i>Starter Pokémon:</i> <span> </span> </li>
+              <li> <i>Main Pokémon:</i> <span> </span> </li>
+              <li> <i>Secondary Pokémon:</i> <span> </span> </li>
+              <li> <i>Mega Pokémon:</i> <span> </span> </li>
+              <li> <i>Gigantamax: </i> <span></span> </li>
+            </ul>
+
+            <!--RIGHT-->
+            <ul class="cell2">
+              <li> <i>Ride Pokémon:</i> <span> </span> </li>
+              <li> <i>Service Pokémon:</i> <span> </span> </li>
+              <li> <i>Shiny Pokémon:</i><span> </span> </li>
+              <li> <i>Befriended Pokémon:</i><span> </span> </li>
+              <li> <i>Mascot:</i> <span></span> </li>
+            </ul>
+          </div>
+          <!--biodata-->
+
+          <!--BIOGRAPHY-->
+          <div class="biotxt">
+            <h3>Owned:</h3>
+
+   <div id="pkmncard">
+              <div class="name"><b></b> <span>the </span> <img
+                  src="https://raw.githubusercontent.com/msikma/pokesprite/master/misc/special-attribute/shiny-stars.png">
+                <img src="https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/fire.png"
+                  style="margin-left: 80px;">
+                <img src="https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/fighting.png">
+              </div>
+              <div class="sprite"><img src="https://play.pokemonshowdown.com/sprites/gen5/.png"></a></div>
+              <div class="ability">Ability: <b>-</b></div>
+              <div class="item">Item: <b> - </b> </div>
+              <div class="move1" style="color:#fff; background-color:var(--dark);">Move 1</div>
+              <div class="move2" style="color:#fff; background-color:var(--fighting);">Move 2</div>
+              <div class="move3" style="color:#fff; background-color:var(--fire);">Move 3</div>
+              <div class="move4" style="color:#fff; background-color:var(--fighting);">Move 4</div>
+            </div>
+
+            <div id="pkmncard">
+              <div class="name"><b></b> <span>the </span>
+                <img src="https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/fire.png"
+                  style="margin-left: 45px;">
+                <img src="https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/fighting.png">
+              </div>
+              <div class="sprite"><img src="https://play.pokemonshowdown.com/sprites/gen5/.png"></a></div>
+              <div class="ability">Ability: <b>-</b></div>
+              <div class="item">Item: <b> - </b> </div>
+              <div class="move1" style="color:#fff; background-color:var(--dark);">Move 1</div>
+              <div class="move2" style="color:#fff; background-color:var(--fighting);">Move 2</div>
+              <div class="move3" style="color:#fff; background-color:var(--fire);">Move 3</div>
+              <div class="move4" style="color:#fff; background-color:var(--fighting);">Move 4</div>
+            </div>
+
+
+            <center>
+
+              <span title=Slowking><img src="https://play.pokemonshowdown.com/sprites/gen5/slowking.png" </a></span>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a> <br>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a><br>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a><br>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+              <img src="https://play.pokemonshowdown.com/sprites/gen5/.png" </a>
+
+            </center>
+          </div>
+        </div>
+        <!--biotxt-->
+        <!--ccard-->
+
+
+
+      </section><!--wrapper-->
+    </div><!--container-->
+  </div><!--outer-->
+
+
+  <!--SCRIPTS
+ DON'T MESS WITH THE SCRIPTS UNLESS YOU KNOW WHAT YOU'RE DOING-->
+  <script>
+    $(document).ready(function () {
+
+      /*CCARD COLORS*/
+      $('.ccard').each(function () {
+        var groupClass = $(this).attr('class').split(" ")[1];
+
+        $(this).find('.cell1').addClass(groupClass);
+        $(this).find('.cell2').addClass(groupClass);
+        $(this).find('.ctags').addClass(groupClass);
+      });
+
+      /*CARDS*/
+      $('.cl').on('click', function (e) {
+        var currentAttrValue = $(this).attr('href');
+        var groupClass = $('.ccard' + currentAttrValue).attr('class').split(" ")[1];
+
+        window.location.hash = $(this).attr('href');
+        $('.ccard' + currentAttrValue).addClass('active').siblings('.ccard').removeClass('active');
+        $(this).addClass('active').siblings('.cl').removeClass('active');
+      });
+
+      /*HASH SCRIPT*/
+      var hash = $.trim(window.location.hash);
+
+      if (hash) {
+        $('.cl[href$="' + hash + '"]').trigger('click');
+      };
+
+
+      /*TOOLTIPS*/
+      $(function () {
+        $(".ccard").tooltip({
+          classes: {
+            "ui-tooltip": "tooltip"
+          },
+          position: {
+            my: "right bottom",
+            at: "right top",
+            collision: "none"
+          },
+        });
+      });
+
+    }); //DOCUMENT READY
+
+  </script>
+
+  <!--
+        MUSIC PLAYER #03 by glenthemes
+        ♬ glenthpvs.tumblr.com/player03
+--->
+
+  <link href="//fonts.googleapis.com/css?family=Public+Sans|Karla" rel="stylesheet">
+  <link href="//glenthemes.github.io/-music-/glenplayer03.css" rel="stylesheet">
+  <script src="//glenthemes.github.io/-music-/glenplayer03.js"></script>
+
+  <style element="glenplayer03">
+    :root {
+      --MusicBox-Left-Or-Right: right;
+      --MusicBox-Edge-Distance: 50px;
+
+      --MusicBox-Width: 250px;
+
+      --MusicBox-Title-Padding: 15px;
+      --MusicBox-Title-Background: -webkit-linear-gradient(left, var(--g12) 0%, var(--color) 50%, var(--g1) 100%);
+      --MusicBox-Title-Size: 10px;
+      --MusicBox-Title-Color: var(--cards);
+      --MusicBox-Title-Corner-Roundness: 0px;
+
+      --MusicBox-Main-Background: var(--box);
+      --MusicBox-Main-Padding: 14px;
+      --MusicBox-Side-Borders: var(--border);
+
+      --Album-Art-Size: 32px;
+      --Album-Art-Corner-Roundness: 3px;
+      --Album-Art-Gap: 10px;
+
+      --Song-Name-Size: 9px;
+      --Song-Name-Color: var(--text);
+
+      --Artist-Name-Size: 10px;
+      --Artist-Name-Color: var(--text);
+
+      --Music-Buttons-Size: 11px;
+      --Music-Buttons-Color: var(--text);
+
+      --Track-Spacing: 9px;
+
+      --Autoplay-First-Song: no;
+      --Autoplay-Next-Song: yes;
+      --Loop-Playlist-Infinitely: no;
+    }
+  </style>
+
+  <div glenplayer03>
+    <div musicbox-title>music box</div>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>I'm Eighteen</div>
+    <div artist-name>Alice Cooper</div>
+
+    <audio src=""></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Round and Round</div>
+    <div artist-name>Aerosmith</div>
+
+    <audio src=""></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+    <div song-name>Hooligans</div>
+    <div artist-name>Issues</div>
+
+    <audio src=""></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Anna Molly</div>
+    <div artist-name>Incubus</div>
+
+    <audio src=""></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Butterflies (pt. 2)</div>
+    <div artist-name>Lana Del Rey</div>
+
+    <audio src=""></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Full Nelson</div>
+    <div artist-name>Limp Bizkit</div>
+
+    <audio src=""></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>The Pretender</div>
+    <div artist-name>Foo Fighters</div>
+
+    <audio src=""></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Hit The Floor</div>
+    <div artist-name>Linkin Park</div>
+
+    <audio src=""></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Her Monolouge</div>
+    <div artist-name>Issues (ft. STP)</div>
+
+    <audio src=""></audio>
+
+    <img album-art src="https://github.com/msikma/pokesprite/blob/master/icons/tr/normal.png?raw=true">
+
+    <div song-name>Even Flow</div>
+    <div artist-name>Pearl Jam</div>
+
+    <audio src=""></audio>
+
+  </div> <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img
+      src="https://c.statcounter.com/12549123/0/c1f866bd/1/" alt="Web Analytics Made Easy - Statcounter"
+      referrerPolicy="no-referrer-when-downgrade"></a>
+
+</body>
+
+</html>

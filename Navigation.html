@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Navigation</title>
+
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1017296908487757865/1077851389897740288/image.png">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <meta charset="utf-8">
+
+    <!---
+    
+    THEME BY SEYCHE.TUMBLR.COM
+    
+    CREDITS:
+    -feather icons by Cole Bemis
+    -search tags by shythemes
+    -full list at seyche.tumblr.com/credits
+    
+--->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter Tight&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <style type="text/css">
+        /*----- LAZY LOAD -----*/
+
+        @keyframes lazyload {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes lazyload {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes lazyload {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes lazyload {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /*----- BASIC DISPLAY OPTIONS 
+
+for a longer explanation on how to add/change emojis, scroll to the html 
+
+-----*/
+
+        /* change this to "visibility: visible;" to show the emojis in the tag boxes */
+        .emoji {
+            visibility: visible;
+        }
+
+        /* change this to "visibility: hidden;" to hide the sidebar icon */
+        #sidebar img {
+            visibility: visible;
+        }
+
+        /*----- COLOURS -----*/
+
+        body {
+            font-family: 'Inter Tight';
+            font-size: 14px;
+            color: #000000;
+            /* text colour */
+            background-color:#ddd;
+    /* background colour */
+            background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png');
+            background-attachment: repeat;
+            line-height: 160%;
+            letter-spacing: 0.2px;
+            word-wrap: break-word;
+            -webkit-animation: lazyload 2s;
+            -moz-animation: lazyload 2s;
+            -o-animation: lazyload 2s;
+            animation: lazyload 2s;
+        }
+
+        /* link colour */
+        a {
+            color: #000000;
+        }
+
+        /* link hover colour */
+        a:hover {
+            color: #701c24;
+        }
+
+        /* tag hover colour */
+        .links a::after {
+            background-color: #d47d86;
+        }
+
+        /* search text colour */
+        .find input,
+        .find input[type=text],
+        input::-webkit-input-placeholder,
+        input::-moz-placeholder,
+        input:-moz-placeholder,
+        input:-ms-input-placeholder {
+            color: #000000;
+        }
+
+
+        /* title colour */
+        title,
+        .title {
+            color: #212121;
+        }
+
+        /* border colour */
+        #search,
+        .links a,
+        .dropdown {
+            border-top: 1px solid #e0e0e0;
+        }
+
+        article {
+            border: 1px solid #e0e0e0;
+        }
+
+        .emoji {
+            border-left: 1px solid #e0e0e0;
+        }
+
+        /* tags box background colour */
+        article {
+            background-color: #fff;
+        }
+
+        /* tag box heading and dropdown box background colour */
+        .title,
+        .dropdown {
+            background-color: #f5f5f5;
+        }
+
+        /* emoji background colour */
+        .emoji {
+            background-color: #ffedef;
+        }
+
+        /*----- RAINBOW TAG HOVER COLOURS: 
+
+    this section gives each tag box a unique emoji background colour and tag hover colour. change the hex colours below to whichever shades and colours you want. 
+    
+    for an explanation of how to edit the colours (i.e. if you wanted to have the boxes alternate pink and blue, and get rid of the rest of the colours), scroll down to the html. 
+    
+    if you only want one link hover colour across all the tag boxes, delete everything in the section below.
+    
+    -----*/
+
+        .yellow .emoji {
+            background-color: #fffced;
+        }
+
+        /* emoji background colour */
+        .yellow .links a:hover {
+            color: #f0c000;
+        }
+
+        /* tag hover colour */
+        .yellow .links a::after {
+            background-color: #f0c000;
+        }
+
+        /* tag hover colour */
+
+        .pink .emoji {
+            background-color: #ffe8ed;
+        }
+
+        .pink .links a:hover {
+            color: #f21b46;
+        }
+
+        .pink .links a::after {
+            background-color: #f21b46;
+        }
+
+        .red .emoji {
+            background-color: #ffebeb;
+        }
+
+        .red .links a:hover {
+            color: #f44336;
+        }
+
+        .red .links a::after {
+            background-color: #f44336;
+        }
+
+        .purple .emoji {
+            background-color: #f7f0ff;
+        }
+
+        .purple .links a:hover {
+            color: #5d00ba;
+        }
+
+        .purple .links a::after {
+            background-color: #5d00ba;
+        }
+
+        .green .emoji {
+            background-color: #ecf5e1;
+        }
+
+        .green .links a:hover {
+            color: #8bc34a;
+        }
+
+        .green .links a::after {
+            background-color: #8bc34a;
+        }
+
+        .orange .emoji {
+            background-color: #fff3e8;
+        }
+
+        .orange .links a:hover {
+            color: #ed7300;
+        }
+
+        .orange .links a::after {
+            background-color: #ed7300;
+        }
+
+        .white .emoji {
+            background-color: #fafafa;
+        }
+
+        .white .links a:hover {
+            color: #dcdcdc;
+        }
+
+        .white .links a::after {
+            background-color: #dcdcdc;
+        }
+
+        .blue .emoji {
+            background-color: #e6f7ff;
+        }
+
+        .blue .links a:hover {
+            color: #20b3f7;
+        }
+
+        .blue .links a::after {
+            background-color: #20b3f7;
+        }
+
+        /*----- END OF RAINBOW TAG HOVER COLOURS -----*/
+
+
+
+        /*----- BASICS -----*/
+
+        a {
+            text-decoration: none;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        a:hover {
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        title,
+        .title {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        ::-webkit-scrollbar {
+            width: 17px;
+            height: 17px;
+            background-color: inherit;
+        }
+
+        ::-webkit-scrollbar-track {
+            border: 8px solid #fafafa;
+            /* background colour */
+            background-color: #e0e0e0;
+            /* scrollbar track colour */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border: 6px solid #fafafa;
+            /* background colour */
+            background-color: #e0e0e0;
+            /* scrollbar colour */
+            min-height: 24px;
+            min-width: 24px;
+        }
+
+        .tmblr-iframe-compact .tmblr-iframe--unified-controls {
+            display: none;
+        }
+
+        #k {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+        }
+
+        /*----- CONTENT CONTAINER: don't edit this please -----*/
+
+        #container {
+            margin: 100px auto;
+            width: calc(840px + 200px);
+        }
+
+        /*----- SIDEBAR -----*/
+
+        #sidebar {
+            width: 200px;
+            position: absolute;
+            float: left;
+      margin-top: 250px;
+      margin-left: -35px;
+        }
+
+        #sidebar img {
+            width: 200px;
+            height: 200px;
+            display: block;
+            position: absolute;
+            float: left;
+      margin-top: -250px;
+      margin-left: -35px;
+            
+        }
+
+        .titleemoji {
+            font-size: 2em;
+            position: absolute;
+            margin-left: -2em;
+        }
+
+        title {
+            display: inline-block;
+        }
+
+        #mainlinks {
+            margin-top: 0.25em;
+        }
+
+        nav a {
+            display: block;
+        }
+
+        #search {
+            margin-top: 1.5em;
+            padding-top: 1.5em;
+            color:#20b3f7;
+        }
+
+        .find {
+            display: inline-block;
+            width: 150px;
+        }
+
+        #search .feather {
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .find input {
+            border: 0;
+            outline: none;
+            display: inline;
+            background: inherit;
+            margin: 0 0 0 1em;
+            padding: 0;
+            font-family: inherit;
+            width: calc(150px - 2em - 14px);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+
+
+        
+        /*----- TAGS BOXES -----*/
+
+        #columns {
+            margin-left: 200px;
+            width: 900px;
+            column-count: 3;
+            column-gap: 5px;
+        }
+
+        article {
+            width: 275px;
+            float: right;
+            break-inside: avoid;
+            margin-bottom: 25px;
+        }
+
+        .title {
+            font-size: 0.9em;
+        }
+
+        .tagheading {
+            padding: 15px;
+            display: inline-block;
+        }
+
+        
+.emoji {float: right; height: 51px; width: 51px; }
+
+        .links a {
+            display: block;
+            padding: 12px 15px;
+            text-transform: none;
+        }
+
+        .links a::after {
+            content: '';
+            position: relative;
+            display: block;
+            height: 1px;
+            width: 0;
+            bottom: -13px;
+            left: -15px;
+            z-index: 5;
+            -webkit-transition: all 0.6s;
+            -moz-transition: all 0.6s;
+            -ms-transition: all 0.6s;
+            -o-transition: all 0.6s;
+            transition: all 0.6s;
+        }
+
+        .links a:hover::after {
+            width: calc(100% + 30px);
+            -webkit-transition: all 0.6s;
+            -moz-transition: all 0.6s;
+            -ms-transition: all 0.6s;
+            -o-transition: all 0.6s;
+            transition: all 0.6s;
+        }
+
+        .dropbutton {
+            cursor: help;
+        }
+
+        .dropdown {
+            display: none;
+            padding: 15px;
+        }
+
+        .dropdown a::after {
+            display: none;
+        }
+
+        .dropdown a {
+            border-top: none;
+            padding: 0;
+            font-style: italic;
+        }
+
+        .dropbutton .feather {
+            float: right;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-top: 0.25em;
+            vertical-align: middle;
+        }
+
+        /*----- RESPONSIVE -----*/
+
+        @media only screen and (max-width: 1279px) {
+
+            #container {
+                width: calc(535px + 225px);
+            }
+
+            #columns {
+                column-count: 2;
+                width: 600px;
+            }
+        }
+
+        @media only screen and (max-width: 899px) {
+            #container {
+                width: calc(230px + 225px);
+            }
+
+            #columns {
+                column-count: 1;
+                width: 230px;
+            }
+        }
+
+        @media only screen and (max-width: 599px) {
+            #container {
+                width: 330px;
+            }
+
+            #columns {
+                margin: auto;
+            }
+
+            #sidebar {
+                position: relative;
+                width: 230px;
+                margin-bottom: 75px;
+            }
+
+            nav a {
+                display: inline;
+                margin-right: 0.5em;
+            }
+
+            #k {
+                position: relative;
+                margin: auto;
+                text-align: center;
+                left: calc(50vw - 0.5em);
+                bottom: 50px;
+            }
+        }
+    </style>
+    <div class="bd"> </div> <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img src="https://c.statcounter.com/12549123/0/c1f866bd/1/" alt="Web Analytics Made Easy - Statcounter"  referrerPolicy="no-referrer-when-downgrade"></a>
+</head>
+
+<body>
+
+    <section id="container">
+
+        <!----- SIDEBAR ----->
+
+        <aside id="sidebar">
+            <img
+                src="https://dl.dropbox.com/scl/fi/7e9wxytglmbrnk27zqcby/Pikachu-Hat.webp?rlkey=vussvj0sad5mdh3dpoaq6mldy&dl=0"><!-- to change the icon to a different picture, replace "{PortraitURL-48}" with the url of the picture you want -->
+            <title>navigation</title>
+
+            <nav id="mainlinks"> <!-- add more links here if you want to -->
+                <a href="/">Home</a>
+
+            </nav>
+
+            <!----- SEARCH BAR ----->
+
+            <nav id="search">
+                <form action="/search" method="javascript:return false" class="find" name="sform">
+                    <i data-feather="search"></i></a>
+                    <input type="text" class="query" name="q" placeholder="search tags" value="" value
+                        autocomplete="off" />
+                </form>
+            </nav>
+
+        </aside>
+
+        <!----- TAGS CONTAINER ----->
+
+        <section id="columns">
+
+            <!----- tags box one ----->
+
+            <article class="yellow">
+
+                <div class="title">
+                    <div class="tagheading">Basics</div>
+                    <span class="emoji">            
+                        <center><img src="https://i.imgur.com/BgZrC3P.png" height="30"style="vertical-align:middle;margin:10px 0px"></center></span></div>
+                
+
+                <div class="links">
+                    <a href="/navigation/families">Family Masterlist</a>
+                    <a href="https://discord.gg/HKfsKw9g">Fankid Discord</a>
+                    <a href="/characters/fankids">Next Gen</a>
+                    <a href="/characters/adults">Original Cast</a>
+                    <a href="/navigation/timeline">Timeline</a>
+                </div>
+
+            </article>
+
+            <article class="blue">
+
+                <div class="title">
+                    <div class="tagheading">heading</div>
+                    <span class="emoji">            
+                        <center><img src="https://i.imgur.com/VbU2rpL.png" height="30"style="vertical-align:middle;margin:10px 0px"></center></span></div>
+                
+
+                <div class="links">
+                    <a class="dropbutton">Kid Pairings <i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                    </div>
+                    <a class="dropbutton">Adult Pairings<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/advancetsunshine">AdvancedTsunshine (Paul/May/Ash)</a>
+                        <a href="/tagged/coma">Coma (Paul/Ash)</a>
+                        <a href="/tagged/playgroundlove">PlaygroundLove (Reggie/Daisy)</a>
+                        <a href="/tagged/jeer">Jeer (Gary/Miette)</a>
+                        <a href="/tagged/gym">Gym (Brock/Misty)</a>
+                        <a href="/tagged/lust">Lust (Brock/Joy)</a>
+                        <a href="/tagged/orange">Orange (Tracey/Misty)</a>
+                        <a href="/tagged/waterwarrior">WaterWarrior (Misty/Lana)</a>
+                        <a href="/tagged/boast">Boast (Barry/Ursula)</a>
+                        <a href="/tagged/brighttower">BrightTower (Barry/Ritchie)</a>
+                        <a href="/tagged/snowpoint">Snowpoint (Sonny/Candice)</a>
+                        <a href="/tagged/penguin">Admirers (Conway/Dawn/Kenny)</a>
+                        <a href="/tagged/dancer">Dancer (Tierno/Serena)</a>
+                        <a href="/tagged/Rocket">Rocket (James/Jessie)</a>
+                        <a href="/tagged/johtofesta">JohtoFesta (Khoury/Lyra)</a>
+                        <a href="/tagged/spoke">Spoke (Bianca/Stephan)</a>
+                        <a href="/tagged/citruspunch">CitrusPunch (Clemont/Lilia)</a>
+                        <a href="/tagged/bittervintage">BitterVintage (Burgundy/Trip)</a>
+
+                    </div>
+
+            </article>
+
+
+
+            <!----- tags box two ----->
+
+            <article class="purple">
+
+                <div class="title">
+                    <div class="tagheading">Original Cast</div>
+                   
+                    <span class="emoji">            
+                        <center><img src="https://i.imgur.com/somA6Hm.png" height="30"style="vertical-align:middle;margin:10px 0px"></center></span></div>
+
+                <div class="links">
+                    <a class="dropbutton">Kanto<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Gohan">Gou Márquez</a>
+                        <a href="/tagged/Horace">Horacio Ambrose</a>
+                        <a href="/tagged/Tracey">Tracey Sketchit</a>
+                        <a href="/tagged/Anne-Joy">Anne Joy-Harrison</a>
+                        <a href="/tagged/Brock">Brock Harrison</a>
+
+
+                    </div>
+                    <a class="dropbutton">Johto<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Chloe">Chloe Di Vitis</a>
+                        <a href="/tagged/Silver">Silver Di Vitis</a>
+                        <a href="/tagged/Barry">Barry Bennett</a>
+                        <a href="/tagged/Ritchie">Ritchie Barnes</a>
+
+                    </div>
+
+                    <a class="dropbutton">Hoenn<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Maxwell">Max Rockwell</a>
+                        <a href="/tagged/Harley">Harley Sloan</a>
+                        <a href="/tagged/Juan">Juan Gracia Molina</a>
+                        <a href="/tagged/Cara-Liss">Cara Stone</a>
+                        <a href="/tagged/Steven">Steven Stone</a>
+                    </div>
+                    <a class="dropbutton">Sinnoh<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/May-Daisy">May-Daisy Weiss</a>
+                        <a href="/tagged/Reggie">Regulus Weiss</a>
+                        <a href="/tagged/Dawn">Dawn Luna</a>
+                        <a href="/tagged/Conway">Conway Luna</a>
+                        <a href="/tagged/Kenny">Kenny Barnes</a>
+                        <a href="/tagged/Sonny">Salvatore D'Amore</a>
+                        <a href="/tagged/Candice">Candice Alcala</a>
+                        <a href="/tagged/Ursula">Ursula Bennett</a>
+                        <a href="/tagged/Cyrus">Cyrus Aristollei</a>
+                    </div>
+                    <a class="dropbutton">Unova<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Bianca">Bianca Sternn</a>
+                        <a href="/tagged/Stephan">Stephan Sternn</a>
+                        <a href="/tagged/Iris">Iris Miranys</a>
+                        <a href="/tagged/Benga">Benga Miranys</a>
+                        <a href="/tagged/Chili">Chili Griffith</a>
+                        <a href="/tagged/Burgundy">Burgundy Fontaine</a>
+                        <a href="/tagged/Trip">Trip Fontaine</a>
+                        <a href="/tagged/Georgia">Georgia Herrscher</a>
+                        <a href="/tagged/Shamus">Shamus Herrscher</a>
+                        <a href="/tagged/Cynthia">Cynthia Aristollei</a>
+                        <a href="/tagged/Alder">Alder Miranys</a>
+
+                    </div>
+                    <a class="dropbutton">Kalos<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Aria">Ariana Elle Griffith</a>
+                        <a href="/tagged/Cilan">Cilan Griffith</a>
+                        <a href="/tagged/Miette">Miette Oak</a>
+                        <a href="/tagged/Gary">Garrett Oak</a>
+                        <a href="/tagged/Nini">Nini Hayden</a>
+                        <a href="/tagged/Andrew">Andrew Hayden</a>
+                        <a href="/tagged/Serena">Serena Vanchure</a>
+                        <a href="/tagged/Tierno">Thierry Vanchure</a>
+                        <a href="/tagged/Lilia">Lilia Valmont</a>
+                        <a href="/tagged/Clemont">Clemont Valmont</a>
+                        <a href="/tagged/Viola">Viola Charpentier</a>
+                        <a href="/tagged/Grant">Grant Charpentier</a>
+                        <a href="/tagged/Mairin">Mairin Marshall</a>
+                        <a href="/tagged/Jimmy">Jimmy Marshall</a>
+                        <a href="/tagged/Alexa">Alexa Rocha</a>
+                        <a href="/tagged/Alain">Alain Rocha</a>
+                        <a href="/tagged/Maiden-Anabel">Anabel Hart</a>
+                        <a href="/tagged/Anabel">Anabel Reznikova</a>
+                        <a href="/tagged/Looker">Looker Reznikov</a>
+                        <a href="/tagged/Archer">Archer Stone</a>
+
+                    </div>
+                    <a class="dropbutton">Alola<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Misty">Misty Starlight</a>
+                        <a href="/tagged/Lana">Lana Starlight</a>
+                        <a href="/tagged/Plumeria">Plumeria De Montoya</a>
+                        <a href="/tagged/Guzma">Alonzo De Montoya</a>
+                        <a href="/tagged/Lillie">Lillie Hausler </a>
+                        <a href="/tagged/Mallow">Mallow Kāne </a>
+                        <a href="/tagged/Selene">Selene Hausler</a>
+                        <a href="/tagged/Gladion">Gladion Hausler</a>
+                    </div>
+                    <a class="dropbutton">Galar<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Ash">Ashton Weiss</a>
+                        <a href="/tagged/May">May Weiss</a>
+                        <a href="/tagged/Paul">Paulus Weiss</a>
+                        <a href="/tagged/Roxie">Roxie Love</a>
+                        <a href="/tagged/Piers">Piers Burdon-Sheppard</a>
+                        <a href="/tagged/Leon">Leon Shahryar</a>
+                        <a href="/tagged/Raihan">Raihan Shahryar</a>
+                        <a href="/tagged/Sonia">Sonia Lauré Garrett </a>
+                        <a href="/tagged/Hop">Hop Masoud</a>
+                        <a href="/tagged/Oleana">Oleana Hightower</a>
+                        <a href="/tagged/Rose">Rose Shahryar</a>
+                        <a href="/tagged/Gloria">Gloria Westford</a>
+                        <a href="/tagged/Bede">Bede Westford</a>
+                        <a href="/tagged/Victor">Victor Guerrero</a>
+                        <a href="/tagged/Quillon">Quillon Cross</a>
+                        <a href="/tagged/Caitlin">Caitlin Addams</a>
+                        <a href="/tagged/Grimsley">Grimsley Addams</a>
+
+                    </div>
+
+            </article>
+
+
+            <!----- tags box three ----->
+
+            <article class="pink">
+
+                <div class="title">
+                    <div class="tagheading">Next Gen</div>
+                    
+                    <span class="emoji">            
+                        <center><img src="https://i.imgur.com/ljuN2Bj.png" height="30"style="vertical-align:middle;margin:10px 0px"></center></span></div>
+               
+                <div class="links">
+                    <a class="dropbutton">Kanto<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Journey">Journey Ambrose</a>
+                        <a href="/tagged/Ventura">Ventura Ambrose</a>
+                        <a href="/tagged/Summer">Summer Harrison</a>
+                        <a href="/tagged/Micah">Micah Harrison</a>
+                        <a href="/tagged/Damon">Damon Harrison</a>
+                        <a href="/tagged/Alyse">Alyse Joy-Harrison</a>
+
+
+                    </div>
+                    <a class="dropbutton">Johto<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Ryan">Ryan Hudson</a>
+                        <a href="/tagged/Sicario">Sicario Di Vitis</a>
+                        <a href="/tagged/Aurelio">Aurelio Di Vitis</a>
+                        <a href="/tagged/Lucia">Lucia Di Vitis</a>
+                        <a href="/tagged/Ian">Ian Bennett</a>
+                        <a href="/tagged/Kaarin">Kaarin Bennett</a>
+                      
+                    </div>
+
+                    <a class="dropbutton">Hoenn<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/JR">Javen Riley Sloan</a>
+                        <a href="/tagged/Rosetta">Rosetta Stone</a>
+                        <a href="/tagged/Mason">Mason Stone</a>
+                    </div>
+                    <a class="dropbutton">Sinnoh<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Bran">Brandon Weiss</a>
+                        <a href="/tagged/Elaine">Elaine Weiss</a>
+                        <a href="/tagged/Isaac">Isaac Luna</a>
+                        <a href="/tagged/Davina">Davina Luna</a>
+                        <a href="/tagged/Loren">Loren Luna</a>
+                        <a href="/tagged/Spinner">Elián D'Amore</a>
+                        <a href="/tagged/Jet">Jet Bennett</a>
+                        <a href="/tagged/Jaime">Jaime Bennett</a>
+                        <a href="/tagged/Juliet">Juliet Bennett</a>
+                    </div>
+                    <a class="dropbutton">Unova<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Harper">Harper Miranys</a>
+                        <a href="/tagged/Adonis">Adonis Miranys</a>
+                        <a href="/tagged/Sage">Sage Miranys</a>
+                        <a href="/tagged/Ridley">Ridley Miranys</a>
+                        <a href="/tagged/Jeremy">Jeremiah Griffith</a>
+                        <a href="/tagged/Anna">Annabelle Griffith</a>
+                        <a href="/tagged/Isabella">Isabella Griffith</a>
+                        <a href="/tagged/Iwan">Iwan Herrscher</a>
+                        <a href="/tagged/Iuile">Iúile Herrscher</a>
+                        <a href="/tagged/KC">K.C. Fontaine</a>
+                        <a href="/tagged/Sterling">Sterling Fontaine</a>
+                        <a href="/tagged/Aerion">Aerion Aristollei</a>
+                        <a href="/tagged/Antheia">Antheia Aristollei</a>
+                        <a href="/tagged/Ambrosia">Ambrosia Aristollei</a>
+                        <a href="/tagged/Lupin">Lupin Addams</a>
+                        <a href="/tagged/Lavender">Lavender Addams</a>
+                        <a href="/tagged/Indigo">Indigo Addams</a>
+                        <a href="/tagged/Violet">Violet Addams</a>
+                        <a href="/tagged/Thistle">Thistle Addams</a>
+                        <a href="/tagged/Cupid">Cupid Addams</a>
+                        
+                    </div>
+                    <a class="dropbutton">Kalos<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Tommen">Tommen Oak</a>
+                        <a href="/tagged/Annika">Annika Oak</a>
+                        <a href="/tagged/Rory">Aurora Oak</a>
+                        <a href="/tagged/Torrance">Torrance Oak</a>
+                        <a href="/tagged/Louie">Louis Hikialani</a>
+                        <a href="/tagged/Helene">Helene Vanchure</a>
+                        <a href="/tagged/Adrian">Adrian Vanchure</a>
+                        <a href="/tagged/Dulce">Dulce Hayden</a>
+                        <a href="/tagged/Merri">Merri Hayden</a>
+                        <a href="/tagged/Calis">Calis Hayden</a>
+                        <a href="/tagged/Amelie">Amelie Rocha</a>
+                        <a href="/tagged/Marisol">Marisol Valmont</a>
+                        <a href="/tagged/Mori">Moriarty Stone</a>
+                        <a href="/tagged/Ronan">Ronan Reznikov</a>
+                        <a href="/tagged/Sherry">Sheridan Reznikova</a>
+                        <a href="/tagged/Nadine">Nadine Marshall</a>
+                        <a href="/tagged/Carina">Carina Charpentier</a>
+                    </div>
+                    <a class="dropbutton">Alola<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Ariel">Ariel Sketchit</a>
+                        <a href="/tagged/Shiera">Shiera Starlight</a>
+                        <a href="/tagged/Lilith">Lilith De Montoya</a>
+                        <a href="/tagged/Seraph">Seraph De Montoya</a>
+                        <a href="/tagged/Maile">Maile Kāne</a>
+                    </div>
+                    <a class="dropbutton">Galar<i data-feather="chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/tagged/Paul-Jr">Paulus Weiss Jr.</a>
+                        <a href="/tagged/Alek">Aleksander Weiss</a>
+                        <a href="/tagged/Cesaire">Cesaire Weiss</a>
+                        <a href="/tagged/Tatia">Tatia Weiss</a>
+                        <a href="/tagged/Lianthe">Lianthe Weiss</a>
+                        <a href="/tagged/Niklaus">Niklaus Weiss</a> 
+                        <a href="/tagged/Valla">Convallaria Weiss</a>
+                        <a href="/tagged/Sabbath">Sabbath L. Sheppard</a>
+                        <a href="/tagged/Zeppelin">Zeppelin L. Sheppard</a>
+                        <a href="/tagged/Nirvana">Nirvana L. Sheppard</a>
+                        <a href="/tagged/Thorne">Thorne Hightower</a>
+                        <a href="/tagged/Nettles">Nettles Hightower</a>
+                        <a href="/tagged/Ramzi">Ramzi Shahryar</a>
+                        <a href="/tagged/Roise">Róise Shahryar</a>
+                        <a href="/tagged/Daario">Daario Masoud</a>
+                        <a href="/tagged/Olyvar">Olyvar Masoud</a>
+                        <a href="/tagged/Freyja">Freyja Masoud</a>
+                        <a href="/tagged/Opal">Opal Marbrand</a>
+                        <a href="/tagged/Vendetta">Vendetta Addams</a>
+                        <a href="/tagged/Juniper">Juniper</a>
+                        <a href="/tagged/Mikken">Mikken</a>
+                        <a href="/tagged/">Dalton</a>
+                        <a href="/tagged/Sigorn">Sigorn Cross</a>
+                    </div>
+
+            </article>
+
+
+            <!--
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                        <a href="/tagged/"></a>
+                    -->
+            <!----- tags box four ----->
+
+            
+            <!----- DO NOT EDIT ANYTHING AFTER HERE ----->
+
+        </section>
+
+    </section>
+
+    <a href="https://seyche.tumblr.com" title="theme by seyche" id="k">&.</a>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery(".dropdown").hide();
+            jQuery(".dropbutton").click(function () {
+                jQuery(this).next(".dropdown").slideToggle(450);
+            });
+        });
+
+        feather.replace()
+
+        $(document).ready(function () {
+            $('.find').submit(function (event) {
+                var value = $('input:first').val();
+                location.replace('http://{Name}.tumblr.com/tagged/' + value);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
